@@ -22,7 +22,8 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.sitename}
-         OwnershipControls:
+        AccessControl: PublicRead
+        OwnershipControls:
           Rules:
             - ObjectOwnership: BucketOwnerEnforced
         AccessControl: PublicRead
