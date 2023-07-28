@@ -22,7 +22,6 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.sitename}
-        AccessControl: PublicRead
         OwnershipControls:
           Rules:
             - ObjectOwnership: BucketOwnerEnforced
@@ -40,7 +39,7 @@ resources:
           Statement:
             - Sid: PublicReadGetObject
               Effect: Allow
-              Principal: "*"
+              Principal: "arn:aws:iam::366325825078:user/BtgUser"
               Action:
               - s3:GetObject
               Resource: arn:aws:s3:::${self:custom.sitename}/*
