@@ -22,9 +22,10 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:custom.sitename}
-        OwnershipControls:
-        Rules:
-          - ObjectOwnership: BucketOwnerEnforced
+         OwnershipControls:
+          Rules:
+            - ObjectOwnership: BucketOwnerEnforced
+        AccessControl: PublicRead
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html
