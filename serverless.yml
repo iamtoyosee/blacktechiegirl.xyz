@@ -20,11 +20,11 @@ resources:
   Resources: 
     BtgFrontend:
       Type: AWS::S3::Bucket
-      PublicAccessBlockConfiguration:
-        BlockPublicPolicy: false
-        RestrictPublicBuckets: false
       Properties:
         BucketName: ${self:custom.sitename}
+        PublicAccessBlockConfiguration:
+          BlockPublicPolicy: false
+          RestrictPublicBuckets: false
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html
