@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f6239a94.css",
+    "main.js": "/static/js/main.cfc233b4.js",
+    "static/media/proto6.jpg": "/static/media/proto6.c5a4449140e9b374441a.jpg",
+    "static/media/blogimage1.avif": "/static/media/blogimage1.1f6725116dbfacd78f40.avif",
+    "static/media/blogimage2.avif": "/static/media/blogimage2.157d0fa4948983897a77.avif",
+    "static/media/photo5.avif": "/static/media/photo5.535b63391b95245dfdec.avif",
+    "static/media/bigtech.woff": "/static/media/bigtech.4a2c5eeb3ab64924ab01.woff",
+    "static/media/blogimage3.avif": "/static/media/blogimage3.6ac95a047c51a1741440.avif",
+    "static/media/LouisVuitton-Medium.woff2": "/static/media/LouisVuitton-Medium.7ee8299ec24012d43a69.woff2",
+    "static/media/LouisVuitton-Bold.woff2": "/static/media/LouisVuitton-Bold.a7cba19f356f99d320b9.woff2",
+    "static/media/LouisVuitton-Regular.woff2": "/static/media/LouisVuitton-Regular.433976c71b7588d584d9.woff2",
+    "static/media/LouisVuitton-Light.woff2": "/static/media/LouisVuitton-Light.4d712082949376444c77.woff2",
+    "static/media/photo4.avif": "/static/media/photo4.731456e05e223bdf889f.avif",
+    "static/media/KFOmCnqEu92Fr1Mu4mxK.woff2": "/static/media/KFOmCnqEu92Fr1Mu4mxK.cb41c1e71debe927815c.woff2",
+    "index.html": "/index.html",
+    "main.f6239a94.css.map": "/static/css/main.f6239a94.css.map",
+    "main.cfc233b4.js.map": "/static/js/main.cfc233b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f6239a94.css",
+    "static/js/main.cfc233b4.js"
+  ]
+}
