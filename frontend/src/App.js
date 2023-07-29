@@ -5,8 +5,12 @@ import Navbar from './Components/Navbar/navabar';
 import Proto1 from "./assets/blogimage1.avif";
 import Proto2 from "./assets/blogimage2.avif";
 import Proto3 from "./assets/blogimage3.avif";
-import Proto4 from "./assets/photo4.avif";
-import Proto5 from "./assets/photo5.avif";
+import Proto4 from "./assets/cyber1 (1).jpg";
+import Proto5 from "./assets/cyber1 (2).jpg";
+import Proto6 from "./assets/cyber1 (3).jpg";
+import Proto7 from "./assets/cyber1 (4).jpg";
+import Proto8 from "./assets/cyber1 (5).jpg";
+
 
 function App() {
   const productRef = useRef(null);
@@ -28,7 +32,22 @@ function App() {
       text: "Weaponization Techniques",
     },
     {
-      imgUrl: Proto3,
+      imgUrl: Proto8,
+      url: "/blog",
+      text: "Building My DNS Scanner",
+    },
+    {
+      imgUrl: Proto4,
+      url: "/blog",
+      text: "In-depth of a vulnerability scanner",
+    },
+    {
+      imgUrl: Proto5,
+      url: "/blog",
+      text: "My favorite hacking techniques",
+    },
+    {
+      imgUrl: Proto6,
       url: "/blog",
       text: "Building My DNS Scanner",
     },
@@ -38,27 +57,12 @@ function App() {
       text: "In-depth of a vulnerability scanner",
     },
     {
-      imgUrl: Proto2,
+      imgUrl: Proto7,
       url: "/blog",
       text: "My favorite hacking techniques",
     },
     {
-      imgUrl: Proto3,
-      url: "/blog",
-      text: "Building My DNS Scanner",
-    },
-    {
-      imgUrl: Proto1,
-      url: "/blog",
-      text: "In-depth of a vulnerability scanner",
-    },
-    {
-      imgUrl: Proto2,
-      url: "/blog",
-      text: "My favorite hacking techniques",
-    },
-    {
-      imgUrl: Proto1,
+      imgUrl: Proto8,
       url: "/blog",
       text: "Over-Engineering my Document Storage",
     },
@@ -68,7 +72,7 @@ function App() {
       text: "Red-Team Capstone Challenge",
     },
     {
-      imgUrl: Proto3,
+      imgUrl: Proto5,
       url: "/blog",
       text: "Weaponization Techniques",
     },
@@ -76,18 +80,18 @@ function App() {
   return (
     <div className="App ">
       <Navbar />
-      <div className='h-[350px] md:h-[600px] lg:h-[800px]  xl:h-[750px] bg-black flex justify-center items-center'>
-        <h1 className='font-bignote text-[40px] md:text-[65px] lg:text-[125px] 2xl:max-w-[60%]   lg:leading-[150px] text-white text-left font-bold'>I AM THAT BLACK TECHIE GIRL</h1>
+      <div className='h-[350px] md:h-[600px] lg:h-[800px]  xl:h-[750px] bg-black flex justify-center items-center px-2'>
+        <h1 className='font-bignote text-[50px] md:text-[65px] lg:text-[125px] 2xl:max-w-[60%]   lg:leading-[150px] text-white text-left font-bold'>I AM THAT BLACK TECHIE GIRL</h1>
       </div>
       {/* section 3 skincare category */}
       <>
-        <div className="h-[500px]  max-w-[90%] 2xl:max-w-[60%] mx-auto duration-700 flex"
+        <div className=" max-w-[90%] 2xl:max-w-[60%] mx-auto duration-700 flex"
         >
           <div>
 
-            <h1 className=" font-bigtech text-left text-[80px] py-4">Toyosi Usman is a <br></br>
+            <h1 className=" font-bigtech text-left  text-[40px] md:text-[80px] py-4">Toyosi Usman is a <br></br>
               security + software engineer.</h1>
-            <h1 className=" text-left font-lvreg text-[30px]">
+            <h1 className=" text-left font-lvreg text-[20px] md:text-[30px] pb-6">
               Software is powerful. It determines how we experience life, and the ways we connect, communicate, and learn. That’s why great design is about more than just beauty or delight. It’s defining the collective future of businesses, customers, and society – and doing it with intention.
             </h1></div>
   
