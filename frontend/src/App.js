@@ -81,7 +81,7 @@ function App() {
     <div className="App ">
       <Navbar />
       <div className='h-[350px] md:h-[600px] lg:h-[800px]  xl:h-[750px] bg-black flex justify-center items-center px-2'>
-        <h1 className='font-bignote text-[40px] md:text-[65px] lg:text-[125px] 2xl:max-w-[60%]   lg:leading-[150px] text-white text-left font-bold'>I AM THAT BLACK TECHIE GIRL</h1>
+        <h1 className='font-bignote text-[50px] md:text-[65px] lg:text-[125px] 2xl:max-w-[60%]   lg:leading-[150px] text-white text-center md:text-left font-bold'>I AM THAT BLACK TECHIE GIRL</h1>
       </div>
       {/* section 3 skincare category */}
       <>
