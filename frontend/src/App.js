@@ -81,7 +81,7 @@ function App() {
     <div className="App ">
       <Navbar />
       <div className='h-[350px] md:h-[600px] lg:h-[800px]  xl:h-[750px] bg-black flex justify-center items-center px-2'>
-        <h1 className='font-bignote text-[50px] md:text-[65px] lg:text-[125px] 2xl:max-w-[60%]   lg:leading-[150px] text-white text-left font-bold'>I AM THAT BLACK TECHIE GIRL</h1>
+        <h1 className='font-bignote text-[40px] md:text-[65px] lg:text-[125px] 2xl:max-w-[60%]   lg:leading-[150px] text-white text-left font-bold'>I AM THAT BLACK TECHIE GIRL</h1>
       </div>
       {/* section 3 skincare category */}
       <>
@@ -89,7 +89,7 @@ function App() {
         >
           <div>
 
-            <h1 className=" font-bigtech text-left  text-[40px] md:text-[80px] py-4">Toyosi Usman is a <br></br>
+            <h1 className=" font-bigtech text-left  text-[30px] md:text-[80px] py-4">Toyosi Usman is a <br></br>
               security + software engineer.</h1>
             <h1 className=" text-left font-lvreg text-[20px] md:text-[30px] pb-6">
               Software is powerful. It determines how we experience life, and the ways we connect, communicate, and learn. That’s why great design is about more than just beauty or delight. It’s defining the collective future of businesses, customers, and society – and doing it with intention.
