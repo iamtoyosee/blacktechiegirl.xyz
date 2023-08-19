@@ -1,28 +1,45 @@
 {
   "files": {
-    "main.css": "/static/css/main.988959cd.css",
-    "main.js": "/static/js/main.71775bc4.js",
+    "main.css": "/static/css/main.868f039a.css",
+    "main.js": "/static/js/main.b55c6547.js",
     "static/media/cyber1 (2).jpg": "/static/media/cyber1 (2).7d535815e88e29dd7060.jpg",
     "static/media/cyber1 (3).jpg": "/static/media/cyber1 (3).f295d7744789b19a37e8.jpg",
     "static/media/cyber1 (4).jpg": "/static/media/cyber1 (4).99fbf37477093f97d068.jpg",
     "static/media/cyber1 (5).jpg": "/static/media/cyber1 (5).0b70f36a035fc233f665.jpg",
     "static/media/cyber1 (1).jpg": "/static/media/cyber1 (1).714b25e74747b9edc258.jpg",
+    "static/media/exp3.jpg": "/static/media/exp3.881493063adc6b11bab1.jpg",
+    "static/media/project2.png": "/static/media/project2.24ff26157a50b698d79b.png",
+    "static/media/exp2.jpeg": "/static/media/exp2.5f4a2776ae2b5b14712d.jpeg",
+    "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/exp1.jpeg": "/static/media/exp1.22e81c723c575f1339c0.jpeg",
+    "static/media/NSE-4-badge-2.png": "/static/media/NSE-4-badge-2.252a38a7f8d321e24ddd.png",
     "static/media/proto6.jpg": "/static/media/proto6.c5a4449140e9b374441a.jpg",
     "static/media/blogimage1.avif": "/static/media/blogimage1.1f6725116dbfacd78f40.avif",
     "static/media/blogimage2.avif": "/static/media/blogimage2.157d0fa4948983897a77.avif",
+    "static/media/aminat.jpg": "/static/media/aminat.a1915b03f327044a7128.jpg",
+    "static/media/project4.jpg": "/static/media/project4.631a786a27e31b928b24.jpg",
+    "static/media/project3.png": "/static/media/project3.14e5572f066c4ac851b2.png",
+    "static/media/oscp.png": "/static/media/oscp.8d658ee4bacc73aed44d.png",
     "static/media/bigtech.woff": "/static/media/bigtech.4a2c5eeb3ab64924ab01.woff",
+    "static/media/aws saa.png": "/static/media/aws saa.c28c518452880a5fdfe4.png",
+    "static/media/aws-dva.png": "/static/media/aws-dva.da9861980f5b9d7004a6.png",
     "static/media/blogimage3.avif": "/static/media/blogimage3.6ac95a047c51a1741440.avif",
-    "static/media/LouisVuitton-Medium.woff2": "/static/media/LouisVuitton-Medium.7ee8299ec24012d43a69.woff2",
+    "static/media/l.woff2": "/static/media/l.3ff586208c60c9fc2996.woff2",
     "static/media/LouisVuitton-Bold.woff2": "/static/media/LouisVuitton-Bold.a7cba19f356f99d320b9.woff2",
     "static/media/LouisVuitton-Regular.woff2": "/static/media/LouisVuitton-Regular.433976c71b7588d584d9.woff2",
-    "static/media/LouisVuitton-Light.woff2": "/static/media/LouisVuitton-Light.4d712082949376444c77.woff2",
+    "static/media/ccna_600.png": "/static/media/ccna_600.589b3ed599262e3bf072.png",
     "static/media/KFOmCnqEu92Fr1Mu4mxK.woff2": "/static/media/KFOmCnqEu92Fr1Mu4mxK.cb41c1e71debe927815c.woff2",
+    "static/media/ccnp_security.png": "/static/media/ccnp_security.9f645b7343ef992d98fe.png",
+    "static/media/test2.svg": "/static/media/test2.095a32e22cacdcc4f9ad45c15e845cc2.svg",
+    "static/media/test3.svg": "/static/media/test3.728083dff1cc3218f84237596e458eb2.svg",
+    "static/media/test4.svg": "/static/media/test4.fa2e1baa951f567d35f4e6d6240822e1.svg",
+    "static/media/test.svg": "/static/media/test.5ed8c6165f2be0dcc0b36697dc0755fe.svg",
     "index.html": "/index.html",
-    "main.988959cd.css.map": "/static/css/main.988959cd.css.map",
-    "main.71775bc4.js.map": "/static/js/main.71775bc4.js.map"
+    "main.868f039a.css.map": "/static/css/main.868f039a.css.map",
+    "main.b55c6547.js.map": "/static/js/main.b55c6547.js.map"
   },
   "entrypoints": [
-    "static/css/main.988959cd.css",
-    "static/js/main.71775bc4.js"
+    "static/css/main.868f039a.css",
+    "static/js/main.b55c6547.js"
   ]
 }

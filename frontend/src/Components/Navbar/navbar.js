@@ -183,7 +183,7 @@ const Navbar = () => {
             className="flex ml-5  items-center cursor-pointer relative"
             onClick={() => navigate("/cart")}
           >
-            <div className="bg-[black]  rounded-full absolute right-[-5px] lg:right-6 top-0 text-center text-white text-[9px] font-bold w-4 h-4">{localStorage.getItem('totalQuantity')}</div>
+            <div className="  rounded-full absolute right-[-5px] lg:right-6 top-0 text-center text-[9px] font-bold w-4 h-4">{localStorage.getItem('totalQuantity')}</div>
             <AiOutlineShoppingCart className="mr-2" />
             <h1 className="md: hidden lg:block">   Cart</h1>
           </div>

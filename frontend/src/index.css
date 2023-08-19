@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: "Bigtech";
-    src: url("./assets/fonts/LouisVuitton-Medium.woff2");
+    src: url("./assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2");
   }
 
   @font-face {
     font-family: "smalltech";
-    src: url("./assets/fonts/LouisVuitton-Light.woff2");
+    src: url("./assets/fonts/l.woff2");
   }
 
   @font-face {
@@ -33,5 +33,7 @@
     src: url("./assets/fonts/KFOmCnqEu92Fr1Mu4mxK.woff2");
   }
 
-
-
+  @font-face {
+    font-family: "poppinsreg";
+    src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+  }
