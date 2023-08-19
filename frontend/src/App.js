@@ -101,10 +101,10 @@ function App() {
               </h1>
             </div>
             <div className=" grid grid-cols-2 gap-5 lg:gap-20 my-10 md:max-w-[80%] xl:max-w-[50%]">
-              <button className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border  hover:border-2 border-black duration-300 ease-in  ">
+              <button className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border  hover:border-2 border-black duration-300 ease-in  " onClick={()=>navigate('/about')}>
                 Contact Me
               </button>
-              <button className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border border-gray-400 hover:border-2   duration-300 ease-in  ">
+              <button className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border border-gray-400 hover:border-2   duration-300 ease-in  " onClick={()=>navigate('/about')}>
                 Learn More
               </button>
             </div>
@@ -150,7 +150,7 @@ function App() {
                     beauty or delight.That’s why great design is about more than
                     just beauty or delight.
                   </h1>
-                  <div className=" grid grid-cols-2 lg:gap-20  lg:max-w-[80%] mt-10 ">
+                  <div className=" grid grid-cols-2 lg:gap-20  lg:max-w-[80%] mt-10 " onClick={()=>navigate('/projects')}>
                     <Button text="View Projects" />
                     <ButtonBox text="View Articles" />
                   </div>
@@ -256,10 +256,10 @@ function App() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p className="font-bignote mt-8 mb-3 text-[20px]">
+                <p className="font-bignote mt-8 mb-3 lg:text-[20px]">
                   BlackTechieGirl's Introduction
                 </p>
-                <p className="font-smalltech text-[20px]">
+                <p className="font-smalltech lg:text-[20px]">
                   In this vidoe I introduced myself and discussed my goals and
                   ambitions.
                 </p>
@@ -273,10 +273,10 @@ function App() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p className="font-bignote mt-8 mb-3 text-[20px]">
+                <p className="font-bignote mt-8 mb-3 lg:text-[20px]">
                   Understanding TCP/IP Communication
                 </p>
-                <p className="font-smalltech text-[20px]">
+                <p className="font-smalltech lg:text-[20px]">
                   In this vidoe I gave great detail on the TCP/IP communication
                   process.
                 </p>
@@ -290,10 +290,10 @@ function App() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p className="font-bignote mt-8 mb-3 text-[20px]">
+                <p className="font-bignote mt-8 mb-3 lg:text-[20px]">
                   Latest AWS Security Features
                 </p>
-                <p className="font-smalltech text-[20px]">
+                <p className="font-smalltech lg:text-[20px]">
                   In this vidoe I discussed some of the latest AWS Security
                   Features.
                 </p>

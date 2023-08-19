@@ -63,11 +63,11 @@ const Article = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="font-bignote text-[60px] font-bold text-center my-20">
+      <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center my-10 lg:my-20">
         {" "}
         Let's Learn Something New !😁
       </h1>
-      <div className="max-w-[80%]  2xl:max-w-[70%] mx-auto mb-20">
+      <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
 
         <div
           ref={productRef}
@@ -88,9 +88,9 @@ const Article = () => {
                     // onClick={() => navigate(item.url)}
                     // className="font-smalltech hover:font-bigtech text-lg  hover:border-[#d6a419] text-gray my-6 min-w-[200px] border sm:border-2 p-2 2xl:p-4 hover:bg-white  duration-300 ease-in w-[50%] mx-auto"
                   >
-                    <h1 className="text-xl font-bignote">{item.text}</h1>
+                    <h1 className="lg:text-xl font-bignote">{item.text}</h1>
                   </button>
-                  <p className="font-smalltech text-[20px] ">
+                  <p className="font-smalltech lg:text-[20px] ">
                     I think the first realisation that I was getting old was
                     when I implemented a system to store physical
                   </p>

@@ -63,11 +63,11 @@ const Project = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="font-bignote text-[60px] font-bold text-center my-20">
+      <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center my-10 lg:my-20">
         {" "}
         Creativity at its peak !
       </h1>
-      <div className="max-w-[80%]  2xl:max-w-[70%] mx-auto mb-20">
+      <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
 
         <div
           ref={productRef}
@@ -75,7 +75,7 @@ const Project = () => {
         >
           {categoryObj.map((item, index) => {
             return (
-              <div className="border-y grid grid-cols-2 gap-12 py-20">
+              <div className="border-y lg:grid grid-cols-2 gap-12 py-20">
                 <img
                   src={item.imgUrl}
                   alt="product "
@@ -88,17 +88,17 @@ const Project = () => {
                     // onClick={() => navigate(item.url)}
                     // className="font-smalltech hover:font-bigtech text-lg  hover:border-[#d6a419] text-gray my-6 min-w-[200px] border sm:border-2 p-2 2xl:p-4 hover:bg-white  duration-300 ease-in w-[50%] mx-auto"
                   >
-                    <h1 className="text-xl mb-4 font-bignote">{item.text}</h1>
+                    <h1 className="mt-10 lg:mt-0 text-xl mb-4 font-bignote">{item.text}</h1>
                   </button>
-                  <p className="font-smalltech text-[20px] ">
+                  <p className="font-smalltech text-[18px] lg:text-[20px] ">
                   This is a powerful interactive packet manipulation libary written in Python.This tool has multiple security features and wonderful contributors. Scapy is able to forge or decode packets of a wide number of protocols, send them on the wire, capture them, match requests and replies, and much more. I think the first realisation that I was getting old was
                     when I implemented a system to store physical
                   </p>
-                  <div className=" grid grid-cols-2 gap-20 my-10 max-w-[80%]">
-                <button className="font-smalltech text-[18px] text-gray  min-h-[50px] border  hover:border-2 border-black duration-300 ease-in  ">
+                  <div className=" grid grid-cols-2 gap-5 lg:gap-20 my-10 lg:max-w-[80%]">
+                <button className="font-smalltech text-[18px] text-gray py-2 lg:py-4 border  hover:border-2 border-black duration-300 ease-in  ">
                   View Project
                 </button>
-                <button className="font-smalltech text-[18px] text-gray  min-h-[50px]  border border-gray-400 hover:border-2   duration-300 ease-in  ">
+                <button className="font-smalltech text-[18px] text-gray py-2  lg:py-4  border border-gray-400 hover:border-2   duration-300 ease-in  ">
                   View on Github
                 </button>
               </div>
