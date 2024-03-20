@@ -11,7 +11,7 @@ plugins:
   - serverless-s3-sync
 
 custom:
-  sitename: blacktechiegirl.xyz
+  sitename: blacktechiegirl.com
   s3Sync:
     - bucketName: ${self:custom.sitename}
       localDir: frontend/build

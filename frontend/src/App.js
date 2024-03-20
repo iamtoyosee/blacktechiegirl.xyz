@@ -58,29 +58,36 @@ function App() {
       imgUrl: Test2,
       url: "/blog",
       text: "Security",
+      note: "As an offensive security certified proffessional, I am skilled in developing novel tactics, techniques, and procedures. My proficiency lies in the realms of penetration testing and vulnerability assessments, coupled with a deep comprehension of fundamental security principles encompassing cryptography, encryption, as well as authentication and authorization techniques.",
     },
     {
       imgUrl: Test1,
       url: "/blog",
       text: "Software",
+      note: "Armed with a solid two-year track record of developing applications using a diverse toolkit of languages including Rust, Python, and JavaScript, along with proficiency in both backend and frontend technologies, I am always eager to contribute to the creation of cutting-edge security technologies. Leveraging this expertise, I am primed to deliver top-tier cybersecurity solutions that cater to the unique needs of clients. ",
+
     },
     {
       imgUrl: Test3,
       url: "/blog",
       text: "Cloud",
+      note: "As an offensive security certified proffessional, I am skilled in developing novel tactics, techniques, and procedures. I am proficient in penetration testing and vulnerability assessments with great understanding of core security techniques such as cryptography, encryption, authentication, and authorization techniques. ",
+
     },
     {
       imgUrl: Test4,
       url: "/blog",
       text: "Network",
+      note: "As an offensive security certified proffessional, I am skilled in developing novel tactics, techniques, and procedures. I am proficient in penetration testing and vulnerability assessments with great understanding of core security techniques such as cryptography, encryption, authentication, and authorization techniques. ",
+
     },
   ];
 
   return (
     <div>
       <Navbar />
-      <div className="h-[340px] md:h-[500px] lg:h-[700px] xl:h-[800px] bg-black flex justify-center items-center ">
-        <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote text-[43px] md:text-[85px] lg:text-[100px] 2xl:text-[125px] lg:leading-[150px] text-white text-left font-bold">
+      <div className="h-[400px] md:h-[500px] lg:h-screen bg-black flex justify-center items-center pt-10">
+        <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote text-[43px] md:text-[75px] lg:text-[85px] 2xl:text-[125px] lg:leading-[150px] text-white text-left font-bold">
           Think like an attacker, Build like a defender.
         </h1>
       </div>
@@ -89,22 +96,42 @@ function App() {
         <>
           <div className="py-20 max-w-[90%]  2xl:max-w-[70%] mx-auto">
             <div>
-              <h1 className=" font-smalltech font-bold text-left text-[25px] md:text-[35px] py-4">
+              <h1 className=" font-smalltech font-bold text-left text-[25px] md:text-[30px] py-4">
                 Toyosi Usman is a security +<br></br>software engineer.
               </h1>
-              <h1 className=" text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[30px] pb-6 lg:max-w-[90%] xl:max-w-[70%]">
-                I am that BlackTechieGirl, a title that signifies my immense
-                passion for technology. I am a highly determined and dedicated
-                individual and my primary drive is growth. I would always put in
-                my best to make sure that today is better than yesterday.
-                Software is powerful.
+              <h1 className=" hidden lg:block text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
+                A highly determined and dedicated individual whose primary drive
+                is growth. With over three years of experience in Application
+                Security Engineering, I possess a strong track record of
+                building reliable and secure applications. I develop secure
+                applications by thinking like an attacker and building like a
+                defender. With multiple cybersecurity certifications, I bring deep technical
+                expertise to the table.
+              </h1>
+              <h1 className="  lg:hidden text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
+                A highly determined and dedicated individual whose primary drive
+                is growth. With over three years of experience in Application
+                Security Engineering, I possess a strong track record of
+                building reliable and secure applications.
+              </h1>
+              <h1 className=" text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
+                I am an advocate for synergy, a co-creator in projects that
+                redefine norms. Together, we possess the power to shape the
+                future of technology. Let's Connect and Ignite Transformation
+                ✨🚀
               </h1>
             </div>
             <div className=" grid grid-cols-2 gap-5 lg:gap-20 my-10 md:max-w-[80%] xl:max-w-[50%]">
-              <button className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border  hover:border-2 border-black duration-300 ease-in  " onClick={()=>navigate('/about')}>
+              <button
+                className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border  hover:border-2 border-black duration-300 ease-in  "
+                onClick={() => navigate("/about")}
+              >
                 Contact Me
               </button>
-              <button className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border border-gray-400 hover:border-2   duration-300 ease-in  " onClick={()=>navigate('/about')}>
+              <button
+                className="font-smalltech md:text-[20px] text-gray  py-2 md:py-4 border border-gray-400 hover:border-2   duration-300 ease-in  "
+                onClick={() => navigate("/about")}
+              >
                 Learn More
               </button>
             </div>
@@ -143,14 +170,13 @@ function App() {
                     <img src={expertise[expertState].imgUrl} />
                   </div>
 
-                  <h1 className=" text-center pb-6 text-[18px] leading-8 md: md:text-[25px] font-smalltech md:leading-[35px]">
-                    {expertise[expertState].text} is powerful. It determines how
-                    we experience life, and the ways we connect, communicate,
-                    and learn. That’s why great design is about more than just
-                    beauty or delight.That’s why great design is about more than
-                    just beauty or delight.
+                  <h1 className=" text-center md:text-left pb-6 text-[18px] leading-8 md: md:text-[22px] font-smalltech md:leading-[35px]">
+                    {expertise[expertState].note} 
                   </h1>
-                  <div className=" grid grid-cols-2 lg:gap-20  lg:max-w-[80%] mt-10 " onClick={()=>navigate('/projects')}>
+                  <div
+                    className=" grid grid-cols-2 lg:gap-20  lg:max-w-[80%] mt-10 "
+                    onClick={() => navigate("/projects")}
+                  >
                     <Button text="View Projects" />
                     <ButtonBox text="View Articles" />
                   </div>
@@ -181,8 +207,8 @@ function App() {
                 <img src={Cert6} className="lg:max-w-[200px]" />
               </div>
               <div className="flex justify-center mt-20">
-                  <ButtonBox text="View Certificates" />
-                </div>
+                <ButtonBox text="View Certificates" />
+              </div>
             </div>
           </div>
           {/* projects section   */}
