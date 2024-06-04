@@ -12,6 +12,7 @@ const PageRoute = () => {
     <Router>
       <Routes>
         <Route path="/" exact element={<App />} />
+        <Route path="/admin" exact element={<App />} />
         <Route path="/blog/:blogid" exact element={<BlogPage />} />
         <Route path="/about" exact element={<About />} />
         <Route path="/projects" exact element={<Project />} />

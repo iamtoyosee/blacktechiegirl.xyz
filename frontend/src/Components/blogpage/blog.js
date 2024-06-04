@@ -15,7 +15,7 @@ const BlogPage = () => {
             <div className="max-w-screen-xl  mx-auto py-10">
                 <div className="px-3">
                 <p className="text-gray-400 font-bold pt-[50px] pb-2 text-xl ">category</p>
-                <h1 className="font-bignote text-[30px] md:text-[60px] font-bold ">Divide and Conquer Algorithms with Python Examples</h1>
+                <h1 className="font-bignote text-[30px] md:text-[60px]  old ">Divide and Conquer Algorithms with Python Examples</h1>
                 </div>
                 <div className="">
                     <div className="flex my-5 px-3">
