@@ -22,7 +22,7 @@ const About = () => {
                 <p>
                   I am that BlackTechieGirl, a title that signifies my immense
                   passion for technology. I am a highly determined and dedicated
-                  individual and my primary drive is growth. With three years of experience in Security Software Engineering, I am always looking for an opportunity to make a difference</p>                
+                  individual and my primary drive is growth.My expertise encompasses penetration testing,vulnerability management, security development, threat modeling, and secure coding, all driven by a commitment to continuous learning and professional excellence.</p>                
                   <p>
                   {" "}
                   Software is powerful. It determines how we experience life,
