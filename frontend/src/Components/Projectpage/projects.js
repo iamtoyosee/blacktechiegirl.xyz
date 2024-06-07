@@ -13,6 +13,9 @@ import Proto8 from "../../assets/cyber1 (5).jpg";
 const Project = () => {
   const productRef = useRef(null);
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const categoryObj = [
     {
       imgUrl: Proto1,
@@ -62,11 +65,13 @@ const Project = () => {
   ];
   return (
     <div>
-      <Navbar />
-      <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center my-10 lg:my-20">
+      <Navbar className=""/>
+      <div className="mt-28 mb-10 lg:mt-40 lg:mb-24">
+      <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center">
         {" "}
         Creativity at its peak !
       </h1>
+      </div>
       <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
 
         <div
@@ -109,6 +114,9 @@ const Project = () => {
         </div>
         
       </div>
+
+ 
+      
     </div>
   );
 };

@@ -13,6 +13,9 @@ import Proto8 from "../../assets/cyber1 (5).jpg";
 const Article = () => {
   const productRef = useRef(null);
   const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const categoryObj = [
     {
       imgUrl: Proto1,
@@ -63,19 +66,20 @@ const Article = () => {
   return (
     <div>
       <Navbar />
-      <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center my-10 lg:my-20">
-        {" "}
-        Let's Learn Something New !😁
-      </h1>
+      <div className="mt-28 mb-10 lg:mt-40 lg:mb-24">
+        <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center my-10 lg:my-20">
+          {" "}
+          Let's Learn Something New !😁
+        </h1>
+      </div>
       <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
-
         <div
           ref={productRef}
           class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 duration-700 ease-in mb-10"
         >
           {categoryObj.map((item, index) => {
             return (
-              <div className="relative">
+              <div className="">
                 <img
                   src={item.imgUrl}
                   alt="product "
@@ -99,7 +103,6 @@ const Article = () => {
             );
           })}
         </div>
-        
       </div>
     </div>
   );

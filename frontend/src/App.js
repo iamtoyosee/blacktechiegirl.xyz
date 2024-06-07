@@ -380,7 +380,7 @@ function App() {
             >
               {categoryObj.map((item, index) => {
                 return (
-                  <div className="relative">
+                  <div className="">
                     <img
                       src={item.imgUrl}
                       alt="product "
