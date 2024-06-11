@@ -5,6 +5,7 @@ import About from "./Components/AboutPage/about.js";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Project from "./Components/Projectpage/projects.js";
 import Article from "./Components/Articlespage/articles.js";
+import Pics from "./Components/PicturePage/picspage.js";
 
 
 const PageRoute = () => {
@@ -17,6 +18,7 @@ const PageRoute = () => {
         <Route path="/about" exact element={<About />} />
         <Route path="/projects" exact element={<Project />} />
         <Route path="/blog" exact element={<Article />} />
+        <Route path="/pictures" exact element={<Pics/>} />
       </Routes>
     </Router>
   );

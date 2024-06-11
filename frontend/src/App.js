@@ -15,15 +15,15 @@ import Cert3 from "./assets/ccna_600.png";
 import Cert4 from "./assets/aws saa.png";
 import Cert5 from "./assets/aws-dva.png";
 import Cert6 from "./assets/NSE-4-badge-2.png";
-import Proj1 from "./assets/project4.jpg";
+import Proj1 from "./assets/dnsanalyze.png";
 import Proj2 from "./assets/project2.png";
 import Proj3 from "./assets/project3.png";
 import Test1 from "./assets/test.svg";
 import Test2 from "./assets/test2.svg";
 import Test3 from "./assets/test3.svg";
 import Test4 from "./assets/test4.svg";
-import Exp1 from "./assets/exp3.jpg";
-import Exp2 from "./assets/exp2.jpeg";
+import Exp1 from "./assets/googleio.jpeg";
+import Exp2 from "./assets/reinvent.PNG";
 import Exp3 from "./assets/exp1.jpeg";
 import { Button, ButtonBox } from "./Components/Button/button";
 
@@ -58,27 +58,27 @@ function App() {
       imgUrl: Test2,
       url: "/blog",
       text: "Security",
-      note: "As an offensive security certified proffessional, I am skilled in developing novel tactics, techniques, and procedures. My proficiency lies in the realms of penetration testing and vulnerability assessments, coupled with a deep comprehension of fundamental security principles encompassing cryptography, encryption, as well as authentication and authorization techniques.",
+      note: "As a security engineer, I am skilled in developing novel tactics, techniques, and procedures. My proficiency lies in the realms of penetration testing and vulnerability assessments, coupled with a deep comprehension of fundamental security principles encompassing cryptography, encryption, as well as authentication and authorization techniques.",
     },
     {
       imgUrl: Test1,
       url: "/blog",
       text: "Software",
-      note: "Armed with a solid two-year track record of developing applications using a diverse toolkit of languages including Rust, Python, and JavaScript, along with proficiency in both backend and frontend technologies, I am always eager to contribute to the creation of cutting-edge security technologies. Leveraging this expertise, I am primed to deliver top-tier cybersecurity solutions that cater to the unique needs of clients. ",
+      note: "Armed with a solid two-year track record of developing applications using a diverse toolkit of languages including Rust, Python, and JavaScript, along with proficiency in both backend and frontend technologies, I am always eager to contribute to the creation of cutting-edge security technologies. Leveraging this expertise, I am primed to deliver top-tier cybersecurity solutions. ",
 
     },
     {
       imgUrl: Test3,
       url: "/blog",
       text: "Cloud",
-      note: "As an offensive security certified proffessional, I am skilled in developing novel tactics, techniques, and procedures. I am proficient in penetration testing and vulnerability assessments with great understanding of core security techniques such as cryptography, encryption, authentication, and authorization techniques. ",
+      note: "As a cloud engineer, I am adept at designing and deploying scalable, highly available, and fault-tolerant systems on AWS. My expertise encompasses a wide range of cloud computing principles, with a deep understanding of key AWS services such as EC2, S3, Lambda, and RDS, as well as advanced networking, security, and compliance best practices.",
 
     },
     {
       imgUrl: Test4,
       url: "/blog",
       text: "Network",
-      note: "As an offensive security certified proffessional, I am skilled in developing novel tactics, techniques, and procedures. I am proficient in penetration testing and vulnerability assessments with great understanding of core security techniques such as cryptography, encryption, authentication, and authorization techniques. ",
+      note: "As a certified CCNA network engineer, I have a deep understanding of networking principles and technologies, I strive to ensure optimal network performance, security, and reliability. My expertise includes routing and switching, network troubleshooting, and implementing network security measures. I am committed to staying updated with the latest networking trends and technologies.",
 
     },
   ];
@@ -199,7 +199,7 @@ function App() {
               </div>
 
               <div className="grid grid-cols-2 lg:grid-cols-6 ">
-                <img src={Cert1} className="lg:max-w-[200px]" />
+                <img src={Cert1} className="lg:max-w-[200px] blur-sm" />
                 <img src={Cert2} className="lg:max-w-[200px]" />
                 <img src={Cert3} className="lg:max-w-[200px]" />
                 <img src={Cert4} className="lg:max-w-[200px]" />
@@ -207,7 +207,9 @@ function App() {
                 <img src={Cert6} className="lg:max-w-[200px]" />
               </div>
               <div className="flex justify-center mt-20">
+              <a href="https://www.credly.com/users/aminat-usman/badges" target="_blank" rel="noopener noreferrer">
                 <ButtonBox text="View Certificates" />
+                </a>
               </div>
             </div>
           </div>
@@ -224,14 +226,17 @@ function App() {
               <div>
                 <img src={Proj1} className="lg:min-h-[300px]" />
                 <p className="font-bignote mt-8 mb-3 text-[18px] lg:text-[20px]">
-                  Vulnerability Scanner
+                  Advanced DNS Analyzer
                 </p>
                 <p className="font-smalltech text-[18px] lg:text-[20px]">
-                  This vulnerability scanner provides in-depth insight on the
-                  state of a security infrastructure
+                  This  DNS analyzer provides in-depth insight on the
+                  state of a DNS infrastructure using AI & ML.
                 </p>
                 <div className="flex justify-center mt-4 lg:mt-10">
-                  <ButtonBox text="View Project" />
+                <a href="https://github.com/iamtoyosee/DNS-Analyzer/tree/main" target="_blank" rel="noopener noreferrer">
+  <ButtonBox text="View Project" />
+</a>
+
                 </div>
               </div>
               <div>
@@ -277,13 +282,13 @@ function App() {
                 <iframe
                   width="360"
                   height="315"
-                  src="https://www.youtube.com/embed/jRWNRJlqMqE"
+                  src="https://www.youtube.com/embed/LHsnPNAR3dc?si=jys0R4H-fpiUah9p"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
                 <p className="font-bignote mt-8 mb-3 lg:text-[20px]">
-                  BlackTechieGirl's Introduction
+                  Google Developer Student Lead
                 </p>
                 <p className="font-smalltech lg:text-[20px]">
                   In this vidoe I introduced myself and discussed my goals and
@@ -294,34 +299,32 @@ function App() {
                 <iframe
                   width="360"
                   height="315"
-                  src="https://www.youtube.com/embed/lh-0wPmVT2k"
+                  src="https://www.youtube.com/embed/34-cJyWhsbU?si=kGZkNb14s_ML2i5Q"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
                 <p className="font-bignote mt-8 mb-3 lg:text-[20px]">
-                  Understanding TCP/IP Communication
+                  BEST EDR SOLUTIONS
                 </p>
                 <p className="font-smalltech lg:text-[20px]">
-                  In this vidoe I gave great detail on the TCP/IP communication
-                  process.
+                This quick presentation gives an oversight on two great EDR solutions.
                 </p>
               </div>
               <div>
                 <iframe
                   width="360"
                   height="315"
-                  src="https://www.youtube.com/embed/lh-0wPmVT2k"
+                  src="https://www.youtube.com/embed/eIjuVYvFDWc?si=yeZmyiJcfck1wlRI"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
                 <p className="font-bignote mt-8 mb-3 lg:text-[20px]">
-                  Latest AWS Security Features
+                  101 Checkout CRM Software
                 </p>
                 <p className="font-smalltech lg:text-[20px]">
-                  In this vidoe I discussed some of the latest AWS Security
-                  Features.
+                  In this vidoe I discussed some of the latest features of 101 checkout.
                 </p>
               </div>
             </div>
@@ -342,18 +345,20 @@ function App() {
             </div>
 
             <div className="grid lg:grid-cols-3">
-              <div>
+            <div>
                 <img src={Exp1} className="w-[400px] lg:h-[300px]" />
                 <p className="font-bignote my-4 lg:mt-8 lg:mb-3 text-[20px]">
-                  Open Source Festival 2022
+                  Google I/O 2024 Shoreline CA
                 </p>
               </div>
-              <div>
+            <div>
                 <img src={Exp2} className="w-[400px] lg:h-[300px]" />
                 <p className="font-bignote my-4 lg:mt-8 lg:mb-3 text-[20px]">
-                  She Codes Software Hackhaton 2020
+                  AWS Reinvet 2023 Las Vegas
                 </p>
               </div>
+              
+            
               <div>
                 <img src={Exp3} className="w-[400px] lg:h-[300px]" />
                 <p className="font-bignote mt-8 mb-3 text-[20px]">

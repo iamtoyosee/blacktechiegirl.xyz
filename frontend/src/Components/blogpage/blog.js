@@ -38,13 +38,9 @@ const BlogPage = () => {
 
                 <div className="font-lvreg text-2xl px-2">
                     <p className="py-4" >Often I&rsquo;ll hear about how you can optimise a for loop to be faster or how switch statements are faster than if statements. Most computers have over 1 core, with the ability to support multiple threads. Before worrying about optimising for loops or if statements try to attack your problem from a different angle.</p>
-                    <hr ></hr>
                     <p className="py-4">Divide and Conquer is one way to attack a problem from a different angle. Don&rsquo;t worry if you have zero experience or knowledge on the topic. This article is designed to be read by someone with very little programming knowledge.</p>
-                    <hr ></hr>
                     <p className="py-4">I will explain this using 3 examples. The first will be a simple explanation. The second will be some code. The final will get into the mathematical core of divide and conquer techniques. (Don&rsquo;t worry, I hate maths too).</p>
-                    <hr ></hr>
                     <p className="py-4">What Is Divide and Conquer? &#55356;&#57102; Divide and conquer is where you divide a large problem up into many smaller, much easier-to-solve problems. The rather small example below illustrates this.</p>
-                    <hr ></hr>
                     <p className="py-4">What Is Divide and Conquer? &#55356;&#57102; Divide and conquer is where you divide a large problem up into many smaller, much easier-to-solve problems. The rather small example below illustrates this.</p>
 
                     <p className="py-4">3+6+2+4 is divided into 3+6 and 2+4 We take the equation &ldquo;3 + 6 + 2 + 4&rdquo; and cut it down into the smallest set of equations, which is [3 + 6, 2 + 4]. It could also be [2 + 3, 4 + 6]. The order doesn&rsquo;t matter, as long as we turn this one long equation into many smaller equations.</p>

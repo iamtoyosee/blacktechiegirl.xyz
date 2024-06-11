@@ -26,22 +26,16 @@ const About = () => {
               </div>
               <h1 className=" text-left font-smalltech text-[18px] leading-10 md:text-[22px] pb-6">
                 <p>
-                  I am that BlackTechieGirl, a title that signifies my immense
+                  I am that Black Techie, a title that signifies my immense
                   passion for technology. I am a highly determined and dedicated
-                  individual and my primary drive is growth.My expertise encompasses penetration testing,vulnerability management, security development, threat modeling, and secure coding, all driven by a commitment to continuous learning and professional excellence.</p>                
-                  <p>
-                  {" "}
-                  Software is powerful. It determines how we experience life,
-                  and the ways we connect, communicate, and learn. I would
-                  always put in my best to make sure that today is better than
-                  yesterday.{" "}
-                </p>
+                  individual and my primary drive is growth. My expertise encompasses penetration testing,vulnerability management, security development, threat modeling, and secure coding, all driven by a commitment to continuous learning and professional excellence.</p>                
+                
+                <p>{""}</p>
 
                 <p>
-                  Software is powerful. It determines how we experience life,
-                  and the ways we connect, communicate, and learn. we are going
-                  to focus on the features present on the tabs in the upper
-                  bar.Let's start with the Proxy too
+                  
+                With over three years of experience in Application Security Engineering, I possess a strong track record of building reliable and secure applications. I develop secure applications by thinking like an attacker and building like a defender. With multiple cybersecurity certifications, I bring deep technical expertise to the table.
+                I am an advocate for synergy, a co-creator in projects that redefine norms. Together, we possess the power to shape the future of technology. Let's Connect and Ignite Transformation ✨🚀
                 </p>
               </h1>
               <div className=" grid grid-cols-2 gap-5 lg:gap-20 my-10 max-w-[100%]">

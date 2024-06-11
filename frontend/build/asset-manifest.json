@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.faa0201b.css",
-    "main.js": "/static/js/main.1bf2005e.js",
+    "main.css": "/static/css/main.e1aff7e4.css",
+    "main.js": "/static/js/main.39beb2b8.js",
     "static/media/cyber1 (2).jpg": "/static/media/cyber1 (2).7d535815e88e29dd7060.jpg",
     "static/media/cyber1 (3).jpg": "/static/media/cyber1 (3).f295d7744789b19a37e8.jpg",
     "static/media/cyber1 (4).jpg": "/static/media/cyber1 (4).99fbf37477093f97d068.jpg",
     "static/media/cyber1 (5).jpg": "/static/media/cyber1 (5).0b70f36a035fc233f665.jpg",
     "static/media/cyber1 (1).jpg": "/static/media/cyber1 (1).714b25e74747b9edc258.jpg",
     "static/media/exp3.jpg": "/static/media/exp3.881493063adc6b11bab1.jpg",
+    "static/media/reinvent.PNG": "/static/media/reinvent.44cad9dd8e99dd563618.PNG",
     "static/media/project2.png": "/static/media/project2.24ff26157a50b698d79b.png",
     "static/media/exp2.jpeg": "/static/media/exp2.5f4a2776ae2b5b14712d.jpeg",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
@@ -17,7 +18,7 @@
     "static/media/blogimage1.avif": "/static/media/blogimage1.1f6725116dbfacd78f40.avif",
     "static/media/blogimage2.avif": "/static/media/blogimage2.157d0fa4948983897a77.avif",
     "static/media/aminat.jpg": "/static/media/aminat.a1915b03f327044a7128.jpg",
-    "static/media/project4.jpg": "/static/media/project4.631a786a27e31b928b24.jpg",
+    "static/media/googleio.jpeg": "/static/media/googleio.f9128472c49ee7c89c62.jpeg",
     "static/media/project3.png": "/static/media/project3.14e5572f066c4ac851b2.png",
     "static/media/oscp.png": "/static/media/oscp.8d658ee4bacc73aed44d.png",
     "static/media/bigtech.woff": "/static/media/bigtech.4a2c5eeb3ab64924ab01.woff",
@@ -28,6 +29,7 @@
     "static/media/LouisVuitton-Bold.woff2": "/static/media/LouisVuitton-Bold.a7cba19f356f99d320b9.woff2",
     "static/media/LouisVuitton-Regular.woff2": "/static/media/LouisVuitton-Regular.433976c71b7588d584d9.woff2",
     "static/media/ccna_600.png": "/static/media/ccna_600.589b3ed599262e3bf072.png",
+    "static/media/dnsanalyze.png": "/static/media/dnsanalyze.725f67d222553ff9ae9c.png",
     "static/media/KFOmCnqEu92Fr1Mu4mxK.woff2": "/static/media/KFOmCnqEu92Fr1Mu4mxK.cb41c1e71debe927815c.woff2",
     "static/media/ccnp_security.png": "/static/media/ccnp_security.9f645b7343ef992d98fe.png",
     "static/media/test2.svg": "/static/media/test2.095a32e22cacdcc4f9ad45c15e845cc2.svg",
@@ -35,11 +37,11 @@
     "static/media/test4.svg": "/static/media/test4.fa2e1baa951f567d35f4e6d6240822e1.svg",
     "static/media/test.svg": "/static/media/test.5ed8c6165f2be0dcc0b36697dc0755fe.svg",
     "index.html": "/index.html",
-    "main.faa0201b.css.map": "/static/css/main.faa0201b.css.map",
-    "main.1bf2005e.js.map": "/static/js/main.1bf2005e.js.map"
+    "main.e1aff7e4.css.map": "/static/css/main.e1aff7e4.css.map",
+    "main.39beb2b8.js.map": "/static/js/main.39beb2b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.faa0201b.css",
-    "static/js/main.1bf2005e.js"
+    "static/css/main.e1aff7e4.css",
+    "static/js/main.39beb2b8.js"
   ]
 }
