@@ -14,7 +14,7 @@ jobs:
           node-version: '20.x'
       - run: npm install
       - run: npm install -g serverless@v3.38.0
-      - run: serverless deploy
+      - run: serverless deploy --force
         env:
             AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
             AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
