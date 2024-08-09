@@ -1,60 +1,241 @@
 import React from "react";
 import Navbar from "../Navbar/navabar";
-import Me from "../../../src/assets/aminat.jpg";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import { Button } from "../Button/button";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-const About = () => {
+const toolbarOptions = [
+  ["bold", "italic", "underline", "strike"], // toggled buttons
+  ["blockquote", "code-block"],
+  ["link", "image", "video", "formula"],
+
+  [{ header: 1 }, { header: 2 }], // custom button values
+  [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+  [{ script: "sub" }, { script: "super" }], // superscript/subscript
+  [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+  [{ direction: "rtl" }], // text direction
+
+  [{ size: ["small", false, "large", "huge"] }], // custom dropdown
+  [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+  [{ color: [] }, { background: [] }], // dropdown with defaults from theme
+  [{ font: [] }],
+  [{ align: [] }],
+
+  ["clean"], // remove formatting button
+  ["code-block"], // add code block button
+];
+const formats = [
+  "font",
+  "size",
+  "bold",
+  "italic",
+  "underline",
+  "strike",
+  "color",
+  "background",
+  "script",
+  "header",
+  "blockquote",
+  "code-block",
+  "indent",
+  "list",
+  "direction",
+  "align",
+  "link",
+  "image",
+  "video",
+  "formula",
+  "code-block", // Enable code block format
+];
+
+
+
+const Admin = () => {
+  const token = localStorage.getItem('authToken');
+  const [title, setTitle] = useState("");
+  const [summary, setSummary] = useState("");
+  const [content, setContent] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [files, setFiles] = useState("");
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
+  const { postid } = useParams();
+
+  const modules = {
+    toolbar: toolbarOptions,
+    syntax: true,
+  };
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+
+    if (postid) {
+      const fetchData = async () => {
+        try {
+          const postResponse = await fetch(
+            `http://100.27.227.72:8080/post/${postid}`
+          );
+
+          if (!postResponse.ok) {
+            throw new Error("Network response was not ok for post");
+          }
+
+          const postData = await postResponse.json();
+
+          setTitle(postData.data.title);
+          setContent(postData.data.content);
+          setSummary(postData.data.summary);
+          setFiles('');
+          console.log(postData.data);
+          setLoading(false);
+        } catch (error) {
+          setError("An error occurred while fetching data");
+          setLoading(false);
+        }
+      };
+
+      fetchData();
+    }
+  }, []);
+
+  const createNewPost = async (ev) => {
+    ev.preventDefault();
+    const data = new FormData();
+    data.set("title", title);
+    data.set("summary", summary);
+    data.set("content", content);
+    data.set("file", files[0]);
+    data.set("author", "blacktechiegirl");
+    data.set("tags", ["Security"]);
+
+    console.log(files);
+
+    setError("");
+    setSuccess("");
+
+    try {
+      const response = await fetch("http://100.27.227.72:8080/post", {
+        method: "POST",
+        headers: {
+          'Authorization': `Bearer ${token}`, // Include the token here
+        },
+        body: data,
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError(errorData.message || "Something went wrong");
+        return;
+      }
+      setSuccess("Awesome");
+      navigate("/blog");
+    } catch (err) {
+      setError("Failed to connect to the server. Please try again later.");
+    }
+  };
+
+  const EditPost = async (ev) => {
+    ev.preventDefault();
+  
+
+  
+    if (!files || files.length === 0) {
+      setError("Please upload an image");
+      alert(error); // Ensure this logs correctly
+      return;
+    }
+  
+    const data = new FormData();
+    data.set("title", title);
+    data.set("summary", summary);
+    data.set("content", content);
+    data.set("file", files[0]); // Ensure file is being uploaded correctly
+    data.set("author", "blacktechiegirl");
+    data.set("tags", JSON.stringify(["Security"])); // Ensure tags are sent correctly
+  
+    console.log("Files:", files);
+  
+    // Clear previous messages
+    setError("");
+    setSuccess("");
+  
+    try {
+      const response = await fetch(`http://100.27.227.72:8080/post/${postid}`, {
+        method: "PATCH",
+        headers: {
+          // 'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`, // Include the token here
+        },
+        body: data,
+      });
+
+      console.log({token})
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        setError(errorData.message || "Something went wrong");
+        return;
+      }
+  
+      setSuccess("Post updated successfully");
+      navigate("/blog");
+    } catch (err) {
+      setError("Failed to connect to the server. Please try again later.");
+    }
+  };
+  
+
   return (
     <div>
       <Navbar />
+      <form className="mt-32 flex flex-col mx-[10%]" onSubmit={postid? EditPost: createNewPost}>
+        <input
+          className="m-4 border-2 rounded-sm p-4 "
+          type="title"
+          placeholder={"Title"}
+          value={title}
+          onChange={(ev) => setTitle(ev.target.value)}
+        />
+        <input
+          className="m-4 border-2 rounded-sm p-4 "
+          type="summary"
+          placeholder={"Summary"}
+          value={summary}
+          onChange={(ev) => setSummary(ev.target.value)}
+        />
 
-      <div className=" ">
-        {/* section 2  */}
-        <div className="bg-gray-200  ">
-          <div className=" duration-700 max-w-[90%]  2xl:max-w-[70%] mx-auto lg:grid lg:grid-cols-2 py-20">
-            <div className="lg:max-w-[90%] pt-10 lg:pt-20">
-              <h1 className=" font-smalltech font-bold text-left  text-[25px] lg:text-[30px] md:text-[35px] lg:py-4">
-                Toyosi Usman is a security +<br></br>software engineer.
-              </h1>
-              <div className="my-10 flex   lg:hidden">
-                <img src={Me} className="max-h-[700px]" />
-              </div>
-              <h1 className=" text-left font-smalltech text-[18px] leading-10 md:text-[22px] pb-6">
-                <p>
-                  I am that BlackTechieGirl, a title that signifies my immense
-                  passion for technology. I am a highly determined and dedicated
-                  individual and my primary drive is growth. With three years of experience in Security Software Engineering, I am always looking for an opportunity to make a difference</p>                
-                  <p>
-                  {" "}
-                  Software is powerful. It determines how we experience life,
-                  and the ways we connect, communicate, and learn. I would
-                  always put in my best to make sure that today is better than
-                  yesterday.{" "}
-                </p>
+        <input
+          className="m-4 border-2 rounded-sm p-4 "
+          type="file"
+          onChange={(ev) => setFiles(ev.target.files)}
+        />
+        <ReactQuill
+          className="my-4 p-4 h-[300px]"
+          formats={formats}
+          value={content}
+          modules={modules}
+          onChange={(newValue) => setContent(newValue)}
+        />
 
-                <p>
-                  Software is powerful. It determines how we experience life,
-                  and the ways we connect, communicate, and learn. we are going
-                  to focus on the features present on the tabs in the upper
-                  bar.Let's start with the Proxy too
-                </p>
-              </h1>
-              <div className=" grid grid-cols-2 gap-5 lg:gap-20 my-10 max-w-[100%]">
-                <button className="font-smalltech lg:text-[20px] text-gray  py-2 lg:py-4 border  hover:border-2 border-black duration-300 ease-in  ">
-                  Contact Me
-                </button>
-                <button className="font-smalltech lg:text-[20px] text-gray  py-2 lg:py-4  border border-gray-400 hover:border-2   duration-300 ease-in  ">
-                  Learn More
-                </button>
-              </div>
-            </div>
-            <div className="my-20 flex justify-end  hidden lg:flex">
-              <img src={Me} className="max-h-[700px]" />
-            </div>
-          </div>
-        </div>
-      </div>
+
+        {postid ? <button className="mt-20 mx-4 py-4 bg-black rounded-md text-white text-xl font-bignote">
+          Edit Post
+        </button> :
+        <button className="mt-20 mx-4 py-4 bg-black rounded-md text-white text-xl font-bignote">
+          Create Post
+        </button>}
+      </form>
     </div>
   );
 };
 
-export default About;
+export default Admin;

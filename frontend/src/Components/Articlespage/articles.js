@@ -1,68 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/navabar";
-import Proto1 from "../../assets/blogimage1.avif";
-import Proto2 from "../../assets/blogimage2.avif";
-import Proto3 from "../../assets/blogimage3.avif";
-import Proto4 from "../../assets/cyber1 (1).jpg";
-import Proto5 from "../../assets/cyber1 (2).jpg";
-import Proto6 from "../../assets/cyber1 (3).jpg";
-import Proto7 from "../../assets/cyber1 (4).jpg";
-import Proto8 from "../../assets/cyber1 (5).jpg";
+import { format } from "date-fns";
 
 const Article = () => {
   const productRef = useRef(null);
   const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
-  const categoryObj = [
-    {
-      imgUrl: Proto1,
-      url: "/blog",
-      text: "Over-Engineering my Storage",
-    },
-    {
-      imgUrl: Proto2,
-      url: "/blog",
-      text: "Red-Team Capstone Challenge",
-    },
-    {
-      imgUrl: Proto3,
-      url: "/blog",
-      text: "Weaponization Techniques",
-    },
-    {
-      imgUrl: Proto4,
-      url: "/blog",
-      text: "Over-Engineering my Storage",
-    },
-    {
-      imgUrl: Proto5,
-      url: "/blog",
-      text: "Red-Team Capstone Challenge",
-    },
-    {
-      imgUrl: Proto6,
-      url: "/blog",
-      text: "Weaponization Techniques",
-    },
-    {
-      imgUrl: Proto7,
-      url: "/blog",
-      text: "Over-Engineering my Storage",
-    },
-    {
-      imgUrl: Proto2,
-      url: "/blog",
-      text: "Red-Team Capstone Challenge",
-    },
-    {
-      imgUrl: Proto8,
-      url: "/blog",
-      text: "Weaponization Techniques",
-    },
-  ];
+    window.scrollTo(0, 0);
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("http://100.27.227.72:8080/post");
+
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const data = await response.json();
+        console.log(data);
+        setPosts(data.data);
+        setLoading(false);
+      } catch (error) {
+        setError("An error occurred while fetching posts");
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+
   return (
     <div>
       <Navbar />
@@ -77,27 +50,32 @@ const Article = () => {
           ref={productRef}
           class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 duration-700 ease-in mb-10"
         >
-          {categoryObj.map((item, index) => {
+          {posts.map((item, index) => {
             return (
-              <div className="">
+              <div
+                className="cursor-pointer"
+                onClick={() => navigate("/blog/" + item._id)}
+              >
                 <img
-                  src={item.imgUrl}
+                  src={"http://100.27.227.72:8080/" + item.cover}
                   alt="product "
-                  className="h-[250px] w-full object-cover object-top cursor-pointer "
+                  className="h-[250px] w-full object-cover  cursor-pointer object-center"
                   onClick={() => navigate(item.url)}
                 />
                 <div className=" top-[50%] w-full">
-                  <button
-                    className="   pt-4"
-                    // onClick={() => navigate(item.url)}
-                    // className="font-smalltech hover:font-bigtech text-lg  hover:border-[#d6a419] text-gray my-6 min-w-[200px] border sm:border-2 p-2 2xl:p-4 hover:bg-white  duration-300 ease-in w-[50%] mx-auto"
-                  >
-                    <h1 className="lg:text-xl font-bignote">{item.text}</h1>
-                  </button>
+                  <p className="font-bignote mt-6 lg:text-xl">{item.title}</p>
+
+                  <h1 className="lg:text-xl font-bignote">{item.text}</h1>
                   <p className="font-smalltech lg:text-[20px] ">
-                    I think the first realisation that I was getting old was
-                    when I implemented a system to store physical
+                    {item.summary}
                   </p>
+                  <div className="flex justify-between">
+                    <p className="text-gray-400 ">
+                      {" "}
+                      {format(new Date(item.createdAt), "MMM d, yyyy")} • 13 min
+                      read
+                    </p>
+                  </div>
                 </div>
               </div>
             );

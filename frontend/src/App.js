@@ -26,6 +26,8 @@ import Exp1 from "./assets/googleio.jpeg";
 import Exp2 from "./assets/reinvent.PNG";
 import Exp3 from "./assets/exp1.jpeg";
 import { Button, ButtonBox } from "./Components/Button/button";
+import Logo from "../src/assets/infini.png"
+
 
 function App() {
   const productRef = useRef(null);
@@ -199,7 +201,7 @@ function App() {
               </div>
 
               <div className="grid grid-cols-2 lg:grid-cols-6 ">
-                <img src={Cert1} className="lg:max-w-[200px] blur-sm" />
+                <img src={Cert1} className="lg:max-w-[200px] blur-sm z-0" />
                 <img src={Cert2} className="lg:max-w-[200px]" />
                 <img src={Cert3} className="lg:max-w-[200px]" />
                 <img src={Cert4} className="lg:max-w-[200px]" />
@@ -419,63 +421,52 @@ function App() {
       </div>
 
       <div className="bg-black">
-        <div>
-          <div className="  border-t pt-16 border-[#efebe8] font-smalltech backgrounD-[#f5f5f5] md:grid md:grid-cols-10 w-[90%] 2xl:w-[80%] mx-auto mt-36 text-lg text-white">
-            <div className="col-span-4">
-              <p className="font-bignote text-3xl mb-3">Black.</p>
-              <p className="leading-7">
-                Black is the number one beauty ecommerce store<br></br> and an
-                official stocklist of over 50 leading beauty brands.
-              </p>
-              <p className="leading-7">
-                Your one stop shop to all your beauty needs.
-              </p>
-              <p className="leading-7">
-                Let's help you redefine, You deserve a flawless skin.
-              </p>
-            </div>
-            <div className="md:col-span-2 flex md:justify-center my-5">
-              <ul>
-                <li>
-                  <b>INFORMATION</b>
-                </li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>Privacy Policy</li>
-                <li>Terms and Condition</li>
-                <li>Terms and Condition</li>
-              </ul>
-            </div>
-            <div className="md:col-span-2 flex md:justify-center my-5">
-              <ul>
-                <li>
-                  <b>MY ACCOUNT</b>
-                </li>
-                <li>Account</li>
-                <li>My Cart</li>
-                <li>My Wishlist</li>
-                <li>Checkout</li>
-                <li>Returns and Refunds</li>
-              </ul>
-            </div>
-            <div className="md:col-span-2 flex md:justify-center my-5">
-              <ul>
-                <li>
-                  <b>CONTACT</b>
-                </li>
-                <li>Newsletter</li>
-                <li>Stores</li>
-                <li>Privacy Policy</li>
-                <li>Terms and Condition</li>
-              </ul>
-            </div>
-          </div>
-
-          <p className="font-smalltech text-center text-white">
-            Redefine© 2022. All Rights Reserved.
-          </p>
-        </div>
+  <div>
+    <div className="border-t pt-16 border-[#efebe8] font-smalltech md:grid md:grid-cols-10 w-[90%] 2xl:w-[80%] mx-auto mt-36 text-lg text-white">
+      <div className="col-span-4">
+        <p className="font-bignote text-3xl mb-3"> <img src={Logo} className="mt-2" /></p>
+        <p className="leading-7">
+          Welcome to my personal portfolio, where creativity meets technology.
+        </p>
+        <p className="leading-7">
+          Explore my projects, skills, and experience, and let's connect to build something amazing together.
+        </p>
+        <p className="leading-7">
+          Let's collaborate and bring your ideas to life.
+        </p>
       </div>
+      <div className="md:col-span-2 flex md:justify-center my-5">
+        <ul>
+          <li><b>ABOUT</b></li>
+          <li>About Me</li>
+          <li>Contact</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div className="md:col-span-2 flex md:justify-center my-5">
+        <ul>
+          <li><b>PROJECTS</b></li>
+          <li>Portfolio</li>
+          <li>GitHub</li>
+          <li>Case Studies</li>
+        </ul>
+      </div>
+      <div className="md:col-span-2 flex md:justify-center my-5">
+        <ul>
+          <li><b>FOLLOW</b></li>
+          <li>LinkedIn</li>
+          <li>Twitter</li>
+          <li>GitHub</li>
+        </ul>
+      </div>
+    </div>
+
+    <p className="font-smalltech text-center text-white">
+      © 2024 My Portfolio. All Rights Reserved.
+    </p>
+  </div>
+</div>
+
     </div>
   );
 }

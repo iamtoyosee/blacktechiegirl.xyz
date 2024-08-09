@@ -3,65 +3,171 @@ import Navbar from "../Navbar/navabar";
 // import Proto1 from "../../assets/blogimage1.avif";
 import Proto6 from "../../assets/proto6.jpg";
 import Proto1 from "../../assets/cyber1 (5).jpg";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import CommentForm from "./commentform";
+import CommentList from "./commentlist";
+import { useNavigate } from "react-router-dom";
+import hljs from "highlight.js";
+import 'highlight.js/styles/github.css'; 
+import css from "highlight.js/lib/languages/css";
+
 
 
 const BlogPage = () => {
+  const { postid } = useParams();
+  const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    document.querySelectorAll("pre.ql-syntax").forEach((block) => {
+      hljs.highlightBlock(block);
+
+      block.classList.add('bg-gray-100', 'rounded', 'p-4', 'overflow-x-auto');
+
+    });
 
 
 
-    return (
-        <div>
-            <Navbar />
-            <div className="max-w-screen-xl  mx-auto py-10">
-                <div className="px-3">
-                <p className="text-gray-400 font-bold pt-[50px] pb-2 text-xl ">category</p>
-                <h1 className="font-bignote text-[30px] md:text-[60px]  old ">Divide and Conquer Algorithms with Python Examples</h1>
-                </div>
-                <div className="">
-                    <div className="flex my-5 px-3">
-
-                        <img src={Proto6} className="h-[100px]  w-[100px] rounded-full  object-cover object-center border-2 p-1 border-[#d6a419] duration-500 ease-in" />
-                        <div className="m-5">
-                            <p className="font-lvreg font-bold text-2xl">BlackTechieGirl</p>
-                            <p className="text-gray-400 ">Jun 22, 2023 • 13 min read</p>
 
 
-                        </div>
-                    </div>
-                    <img
-                        src={Proto1}
-                        alt="product "
-                        className="h-[400px] mb-10 w-full object-cover object-top cursor-pointer "
-                    />
+    window.scrollTo(0, 0);
+    const fetchData = async () => {
+      try {
+        const postResponse = await fetch(
+          `http://100.27.227.72:8080/post/${postid}`
+        );
+        // const commentResponse = await fetch(
+        //   `http://100.27.227.72:8080/comment/${postid}`
+        // );
 
-                </div>
+        if (!postResponse.ok) {
+          throw new Error("Network response was not ok for post");
+        }
 
-                <div className="font-lvreg text-2xl px-2">
-                    <p className="py-4" >Often I&rsquo;ll hear about how you can optimise a for loop to be faster or how switch statements are faster than if statements. Most computers have over 1 core, with the ability to support multiple threads. Before worrying about optimising for loops or if statements try to attack your problem from a different angle.</p>
-                    <p className="py-4">Divide and Conquer is one way to attack a problem from a different angle. Don&rsquo;t worry if you have zero experience or knowledge on the topic. This article is designed to be read by someone with very little programming knowledge.</p>
-                    <p className="py-4">I will explain this using 3 examples. The first will be a simple explanation. The second will be some code. The final will get into the mathematical core of divide and conquer techniques. (Don&rsquo;t worry, I hate maths too).</p>
-                    <p className="py-4">What Is Divide and Conquer? &#55356;&#57102; Divide and conquer is where you divide a large problem up into many smaller, much easier-to-solve problems. The rather small example below illustrates this.</p>
-                    <p className="py-4">What Is Divide and Conquer? &#55356;&#57102; Divide and conquer is where you divide a large problem up into many smaller, much easier-to-solve problems. The rather small example below illustrates this.</p>
+        // if (!commentResponse.ok) {
+        //   throw new Error("Network response was not ok for comments");
+        // }
 
-                    <p className="py-4">3+6+2+4 is divided into 3+6 and 2+4 We take the equation &ldquo;3 + 6 + 2 + 4&rdquo; and cut it down into the smallest set of equations, which is [3 + 6, 2 + 4]. It could also be [2 + 3, 4 + 6]. The order doesn&rsquo;t matter, as long as we turn this one long equation into many smaller equations.</p>
+        const postData = await postResponse.json();
+        // const commentData = await commentResponse.json();
 
-                    <p className="py-4">Let&rsquo;s say we have 8 numbers:</p>
+        setPosts(postData.data);
+        // setComments(commentData.data);
+        console.log('newerror')
+        console.log(postData.data);
+        setLoading(false);
+      } catch (error) {
+        setError("An error occurred while fetching data");
+        setLoading(false);
+      }
+    };
 
-                    <p className="py-4"> We want to add them all together. We first divide the problem into 8 equal sub-problems. We do this by breaking the addition up into individual numbers.</p>
+    fetchData();
+  }, [posts.content]);
 
-                    <p className="py-4"> We then add 2 numbers at a time.</p>
+  const handleDeleteClick = async () => {
+    if (!token) {
+      alert("You need to be logged in to delete this post.");
+      return;
+    }
 
-                    <p className="py-4"> Then 4 numbers into 8 numbers which is our resultant.</p>
+    try {
+      const response = await fetch(`http://100.27.227.72:8080/post/${posts._id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      });
 
-                    <p className="py-4"> Why do we break it down to individual numbers at stage 1? Why don&rsquo;t we just start from stage 2? Because while this list of numbers is even if the list was odd you would need to break it down to individual numbers to better handle it.</p>
+      if (!response.ok) {
+        throw new Error("Failed to delete post");
+      }
 
-                    <p className="py-4">A divide and conquer algorithm tries to break a problem down into as many little chunks as possible since it is easier to solve with little chunks. It does this with recursion.</p>
-                </div>
-            </div>
+      alert("Post deleted successfully");
+      navigate("/blog"); // Redirect to the home page or blog list page
+    } catch (error) {
+      console.error("Error deleting post:", error);
+      alert("Error deleting post. Please try again later.");
+    }
+  };
 
+
+  const handleEditClick =() =>{
+    navigate(`/admin/${posts._id}`)
+  }
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+
+  const token = localStorage.getItem("authToken");
+
+  return (
+    <div>
+      {" "}
+      <Navbar />
+      <div className="w-[90%] max-w-[1000px]  mx-auto py-10">
+        <div className="px-3 mt-16">
+          <div className="flex justify-between">
+            <p className="text-gray-400 font-bold pt-[50px] pb-2 text-xl ">
+              category
+            </p>
+            {token && (
+              <div className="flex">
+                <p className="text-gray-400 font-lvreg pt-[50px] pb-2 text-xl mx-5 cursor-pointer bor"                   onClick={handleEditClick}
+                >
+                  Edit Post
+                </p>
+
+                <p
+                  className="text-gray-400 font-lvreg pt-[50px] pb-2 text-xl cursor-pointer"
+                  onClick={handleDeleteClick}
+                >
+                  Delete Post
+                </p>
+              </div>
+            )}
+          </div>
+
+          <h1 className="font-bignote text-[30px] md:text-[60px]  old ">
+            {posts.title}
+          </h1>
         </div>
-    )
-}
+        <div className="">
+          <div className="flex my-5 px-3">
+            <img
+              src={Proto6}
+              className="h-[100px]  w-[100px] rounded-full  object-cover object-center border-2 p-1 border-[#d6a419] duration-500 ease-in"
+            />
+            <div className="m-5">
+              <p className="font-lvreg font-bold text-2xl">BlackTechieGirl</p>
+              <p className="text-gray-400 ">Jun 22, 2023 • 13 min read</p>
+            </div>
+          </div>
+          <img
+            src={"http://100.27.227.72:8080/" + posts.cover}
+            alt="product "
+            className="h-[400px] mb-10 w-full object-cover object-center cursor-pointer "
+          />
+        </div>
 
+        <div className=" font-smalltech text-2xl">
+          <main class="container mx-auto">
+            <div
+              dangerouslySetInnerHTML={{ __html: posts.content }}
+              className="my-48"
+            />
+            <CommentList comments={comments} />
+          </main>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default BlogPage;
