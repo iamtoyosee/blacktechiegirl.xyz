@@ -28,6 +28,9 @@ resources:
         WebsiteConfiguration:
           IndexDocument: index.html
           ErrorDocument: index.html
+        Tags:
+        - Key: "TagName"
+          Value: "TagValue"
         
 
     BtgFrontendPolicy:
