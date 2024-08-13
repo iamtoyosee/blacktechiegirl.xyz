@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://100.27.227.72:3000](http://100.27.227.72:3000) to view it in your browser.
+Open [https://api.blacktechiegirl.com:3000](https://api.blacktechiegirl.com:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

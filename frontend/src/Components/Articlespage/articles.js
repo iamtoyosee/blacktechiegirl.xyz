@@ -14,7 +14,7 @@ const Article = () => {
     window.scrollTo(0, 0);
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://100.27.227.72:8080/post");
+        const response = await fetch("https://api.blacktechiegirl.com/post");
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -57,7 +57,7 @@ const Article = () => {
                 onClick={() => navigate("/blog/" + item._id)}
               >
                 <img
-                  src={"http://100.27.227.72:8080/" + item.cover}
+                  src={"https://api.blacktechiegirl.com/" + item.cover}
                   alt="product "
                   className="h-[250px] w-full object-cover  cursor-pointer object-center"
                   onClick={() => navigate(item.url)}

@@ -20,7 +20,7 @@ const LoginPage = () => {
     
     
         try {
-          const response = await fetch('http://100.27.227.72:8080/auth/login', {
+          const response = await fetch('https://api.blacktechiegirl.com/auth/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' },

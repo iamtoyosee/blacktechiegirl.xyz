@@ -39,10 +39,10 @@ const BlogPage = () => {
     const fetchData = async () => {
       try {
         const postResponse = await fetch(
-          `http://100.27.227.72:8080/post/${postid}`
+          `https://api.blacktechiegirl.com/post/${postid}`
         );
         // const commentResponse = await fetch(
-        //   `http://100.27.227.72:8080/comment/${postid}`
+        //   `https://api.blacktechiegirl.com/comment/${postid}`
         // );
 
         if (!postResponse.ok) {
@@ -77,7 +77,7 @@ const BlogPage = () => {
     }
 
     try {
-      const response = await fetch(`http://100.27.227.72:8080/post/${posts._id}`, {
+      const response = await fetch(`https://api.blacktechiegirl.com/post/${posts._id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -150,7 +150,7 @@ const BlogPage = () => {
             </div>
           </div>
           <img
-            src={"http://100.27.227.72:8080/" + posts.cover}
+            src={"https://api.blacktechiegirl.com/" + posts.cover}
             alt="product "
             className="h-[400px] mb-10 w-full object-cover object-center cursor-pointer "
           />

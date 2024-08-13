@@ -19,7 +19,7 @@ const RegistrationPage = () => {
     }
 
     try {
-      const response = await fetch('http://100.27.227.72:8080/auth/signup', {
+      const response = await fetch('https://api.blacktechiegirl.com/auth/signup', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
