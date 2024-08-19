@@ -19,7 +19,7 @@ const About = () => {
           <div className=" duration-700 max-w-[90%]  2xl:max-w-[70%] mx-auto lg:grid lg:grid-cols-2 py-20">
             <div className="lg:max-w-[90%] pt-10 lg:pt-20">
               <h1 className=" font-smalltech font-bold text-left  text-[25px] lg:text-[30px] md:text-[35px] lg:py-4">
-                Toyosi Usman is a security +<br></br>software engineer.
+                Toyosi Usman is a security +<br></br>software engineers.
               </h1>
               <div className="my-10 flex   lg:hidden">
                 <img src={Me} className="max-h-[700px]" />
