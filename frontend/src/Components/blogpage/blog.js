@@ -134,7 +134,7 @@ const BlogPage = () => {
             )}
           </div>
 
-          <h1 className="font-bignote text-[30px] md:text-[60px]  old ">
+          <h1 className="font-bignote text-[40px] md:text-[60px]  old ">
             {posts.title}
           </h1>
         </div>
@@ -142,21 +142,21 @@ const BlogPage = () => {
           <div className="flex my-5 px-3">
             <img
               src={Proto6}
-              className="h-[100px]  w-[100px] rounded-full  object-cover object-center border-2 p-1 border-[#d6a419] duration-500 ease-in"
+              className="h-[60px] w-[60px] md:h-[100px]  md:w-[100px] rounded-full  object-cover object-center border-2 p-1 border-[#d6a419] duration-500 ease-in"
             />
-            <div className="m-5">
-              <p className="font-lvreg font-bold text-2xl">BlackTechieGirl</p>
-              <p className="text-gray-400 ">Jun 22, 2023 • 13 min read</p>
+            <div className="mx-5 flex flex-col justify-center ">
+              <p className="font-lvreg font-bold md:text-2xl">BlackTechieGirl</p>
+              <p className="text-gray-400 text-[10px] lg:text-lg">Jun 22, 2023 • 13 min read</p>
             </div>
           </div>
           <img
             src={ posts.cover}
             alt="product "
-            className="h-[600px] mb-8  w-full object-cover object-center cursor-pointer "
+            className="lg:h-[600px] mb-8  w-full object-cover object-center cursor-pointer "
           />
         </div>
 
-        <div className=" font-smalltech text-2xl">
+        <div className=" font-smalltech md:text-2xl">
           <main class="container mx-auto">
             <div
               dangerouslySetInnerHTML={{ __html: posts.content }}

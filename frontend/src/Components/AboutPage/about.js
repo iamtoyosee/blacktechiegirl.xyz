@@ -21,13 +21,13 @@ const About = () => {
         <div className="bg-gray-200  ">
           <div className=" duration-700 max-w-[90%]  2xl:max-w-[70%] mx-auto lg:grid lg:grid-cols-2 py-20">
             <div className="lg:max-w-[90%] pt-10 lg:pt-32">
-              <h1 className=" font-smalltech font-bold text-left  text-[25px] lg:text-[100px] md:text-[35px] lg:py-4">
+              <h1 className=" font-smalltech font-bold text-left  text-[75px] lg:text-[100px] md:text-[35px] lg:py-4">
                 {/* Toyosi Usman is a security +<br></br>software engineer. */}
                 So who am I ?
               </h1>
 
               <div className="my-10 flex   lg:hidden">
-                <img src={Me} className="max-h-[700px]" />
+                <img src={Me} className="max-h-[350px] lg:max-h-[700px] w-full object-cover object-top"  />
               </div>
               <h1 className=" text-left font-smalltech text-[18px] leading-10 md:text-[22px] pb-6">
                 <p>
@@ -50,10 +50,10 @@ const About = () => {
 
                 <div className="flex justify-between mt-4">
                   <div className="flex items-center cursor-pointer">
-                    <img src={FaYoutube} className="w-6 h-6 " />
+                    <img src={FaYoutube} className="md:w-6 md:h-6  w-5 h-5 " />
                     <a
                       href="https://www.youtube.com/@user-rr1vx4vc8s"
-                      className="mx-3 underline underline-offset-2 unde text-gray-600 align-text-top"
+                      className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 align-text-top"
                     >
                       Youtube
                     </a>
@@ -62,7 +62,7 @@ const About = () => {
                     <img src={FaLinkedIn} className="w-6 h-6" />
                     <a
                       href="https://www.linkedin.com/in/aminat-usman-5169b6173/"
-                      className="mx-3 underline underline-offset-2 unde text-gray-600 "
+                      className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 "
                     >
                       LinkedIn
                     </a>
@@ -71,7 +71,7 @@ const About = () => {
                     <img src={FaGithub} className="w-6 h-6" />
                     <a
                       href="https://github.com/iamtoyosee"
-                      className="mx-3 underline underline-offset-2 unde text-gray-600 "
+                      className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 "
                     >
                       Github
                     </a>
@@ -80,7 +80,7 @@ const About = () => {
                     <img src={FaTwitter} className="w-8 h-8" />
                     <a
                       href="https://x.com/BTG1011"
-                      className="mx-3 underline underline-offset-2 unde text-gray-600 "
+                      className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 "
                     >
                       Twitter
                     </a>

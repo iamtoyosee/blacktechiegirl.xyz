@@ -199,14 +199,16 @@ function App() {
                 </h1>
               </div>
 
-              <div className="grid grid-cols-2 lg:grid-cols-6 ">
-                <img src={Cert1} className="lg:max-w-[200px] blur-sm z-0" />
-                <img src={Cert2} className="lg:max-w-[200px]" />
-                <img src={Cert3} className="lg:max-w-[200px]" />
-                <img src={Cert4} className="lg:max-w-[200px]" />
-                <img src={Cert5} className="lg:max-w-[200px]" />
-                <img src={Cert6} className="lg:max-w-[200px]" />
-              </div>
+                <div className="flex justify-center items-center">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+                <img src={Cert1} className="max-w-[80%] lg:max-w-[200px] blur-sm z-0"  />
+                <img src={Cert2} className="max-w-[80%] lg:max-w-[200px]" />
+                <img src={Cert3} className="max-w-[80%] lg:max-w-[200px]" />
+                <img src={Cert4} className="max-w-[80%] lg:max-w-[200px]" />
+                <img src={Cert5} className="max-w-[80%] lg:max-w-[200px]" />
+                <img src={Cert6} className="max-w-[80%] lg:max-w-[200px]" />
+          </div>
+          </div>
               <div className="flex justify-center mt-20">
               <a href="https://www.credly.com/users/aminat-usman/badges" target="_blank" rel="noopener noreferrer">
                 <ButtonBox text="View Certificates" />
@@ -214,6 +216,7 @@ function App() {
               </div>
             </div>
           </div>
+          
           {/* projects section   */}
 
           <div className=" max-w-[90%]  2xl:max-w-[70%] mx-auto">
@@ -225,7 +228,7 @@ function App() {
 
             <div className="grid lg:grid-cols-3 gap-10 mb-[120px] text-center">
               <div>
-                <img src={Proj1} className="lg:min-h-[300px]" />
+                <img src={Proj1} className="h-[250px] w-full" />
                 <p className="font-bignote mt-8 mb-3 text-[18px] lg:text-[20px]">
                   Advanced DNS Analyzer
                 </p>
@@ -241,7 +244,7 @@ function App() {
                 </div>
               </div>
               <div>
-                <img src={Proj2} className="lg:min-h-[300px]" />
+                <img src={Proj2} className="h-[250px] w-full" />
                 <p className="font-bignote mt-8 mb-3 text-[18px] lg:text-[20px]">
                   Black Sniffer
                 </p>
@@ -254,7 +257,7 @@ function App() {
 </a>                </div>
               </div>
               <div>
-                <img src={running} className="lg:min-h-[300px]" />
+                <img src={running} className="h-[250px] w-full" />
                 <p className="font-bignote mt-8 mb-3 text-[18px] lg:text-[20px]">
                   Inside Out
                 </p>
@@ -281,7 +284,7 @@ function App() {
             <div className="grid lg:grid-cols-3 gap-10">
               <div>
                 <iframe
-                  width="360"
+                  width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/LHsnPNAR3dc?si=jys0R4H-fpiUah9p"
                   frameborder="0"
@@ -298,7 +301,7 @@ function App() {
               </div>
               <div>
                 <iframe
-                  width="360"
+                  width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/34-cJyWhsbU?si=kGZkNb14s_ML2i5Q"
                   frameborder="0"
@@ -314,7 +317,7 @@ function App() {
               </div>
               <div>
                 <iframe
-                  width="360"
+                  width="100%"
                   height="315"
                   src="https://www.youtube.com/embed/eIjuVYvFDWc?si=yeZmyiJcfck1wlRI"
                   frameborder="0"

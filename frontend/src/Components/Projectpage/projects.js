@@ -66,8 +66,8 @@ const Project = () => {
   return (
     <div>
       <Navbar className=""/>
-      <div className="mt-28 mb-10 lg:mt-40 lg:mb-24">
-      <h1 className="font-bignote text-[30px] lg:text-[60px] font-bold text-center">
+      <div className="mt-28  mb-5 md:mb-10 lg:mt-40 lg:mb-24">
+      <h1 className="font-bignote text-[40px] lg:text-[60px] font-bold text-center">
         {" "}
         Creativity at its peak !
       </h1>
@@ -80,7 +80,7 @@ const Project = () => {
         >
           {categoryObj.map((item, index) => {
             return (
-              <div className="border-y lg:grid grid-cols-2 gap-12 py-20">
+              <div className="border-y lg:grid grid-cols-2 gap-12  py-10 md:py-20">
                 <img
                   src={item.imgUrl}
                   alt="product "
