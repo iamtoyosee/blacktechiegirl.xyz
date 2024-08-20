@@ -57,7 +57,7 @@ const Article = () => {
                 onClick={() => navigate("/blog/" + item._id)}
               >
                 <img
-                  src={"https://api.blacktechiegirl.com/" + item.cover}
+                  src={item.cover}
                   alt="product "
                   className="h-[250px] w-full object-cover  cursor-pointer object-center"
                   onClick={() => navigate(item.url)}

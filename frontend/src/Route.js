@@ -8,7 +8,7 @@ import Article from "./Components/Articlespage/articles.js";
 import Pics from "./Components/PicturePage/picspage.js";
 import Login from "./Components/Login/login.js";
 import RegistrationPage from "./Components/Register/register.js"
-import Admin from "./Components/Admin/about.js";
+import Admin from "./Components/Admin/createpost.js";
 import ProtectedRoute from "./prot.js";
 
 

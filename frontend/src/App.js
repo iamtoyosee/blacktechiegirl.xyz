@@ -22,12 +22,10 @@ import Test1 from "./assets/test.svg";
 import Test2 from "./assets/test2.svg";
 import Test3 from "./assets/test3.svg";
 import Test4 from "./assets/test4.svg";
-import Exp1 from "./assets/googleio.jpeg";
-import Exp2 from "./assets/reinvent.PNG";
-import Exp3 from "./assets/exp1.jpeg";
 import { Button, ButtonBox } from "./Components/Button/button";
 import Logo from "../src/assets/infini.png"
-
+import ExperienceGallery from "./Components/ExpCarousel/experience"
+import running from "./assets/running.gif"
 
 function App() {
   const productRef = useRef(null);
@@ -177,10 +175,11 @@ function App() {
                   </h1>
                   <div
                     className=" grid grid-cols-2 lg:gap-20  lg:max-w-[80%] mt-10 "
-                    onClick={() => navigate("/projects")}
                   >
-                    <Button text="View Projects" />
-                    <ButtonBox text="View Articles" />
+                    <Button text="View Projects"                     onClick={() => navigate("/projects")}
+                    />
+                    <ButtonBox text="View Articles"                     onClick={() => navigate("/blog")}
+ />
                   </div>
                 </div>
                 <img
@@ -244,28 +243,28 @@ function App() {
               <div>
                 <img src={Proj2} className="lg:min-h-[300px]" />
                 <p className="font-bignote mt-8 mb-3 text-[18px] lg:text-[20px]">
-                  Assets Management Tool
+                  Black Sniffer
                 </p>
                 <p className="font-smalltech text-[18px] lg:text-[20px]">
-                  Get your assets under control with this cloud-based asset
-                  management and tracking platform.
+                command-line tool written in Rust for scanning open ports on a specified target IP address.
                 </p>
                 <div className="flex justify-center mt-4 lg:mt-10">
-                  <ButtonBox text="View Project" />
-                </div>
+                <a href="https://github.com/iamtoyosee/Black_Sniffer" target="_blank" rel="noopener noreferrer">
+  <ButtonBox text="View Project" />
+</a>                </div>
               </div>
               <div>
-                <img src={Proj3} className="lg:min-h-[300px]" />
+                <img src={running} className="lg:min-h-[300px]" />
                 <p className="font-bignote mt-8 mb-3 text-[18px] lg:text-[20px]">
-                  Incident Response Tool
+                  Inside Out
                 </p>
                 <p className="font-smalltech text-[18px] lg:text-[20px]">
-                  This tool helps you Effectively & Efficiently Respond To
-                  Breaches Against Cyberattacks
+                A command-line tool for  performing quick conversions between different data formats..
                 </p>
                 <div className="flex justify-center mt-4 lg:mt-10">
-                  <ButtonBox text="View Project" />
-                </div>
+                <a href="https://github.com/iamtoyosee/Inside_Out" target="_blank" rel="noopener noreferrer">
+  <ButtonBox text="View Project" />
+</a>                </div>
               </div>
             </div>
           </div>
@@ -331,47 +330,21 @@ function App() {
               </div>
             </div>
 
+
             <div className="flex justify-center my-10">
               <div className="flex justify-center mt-10">
-                <ButtonBox text="View Youtube Channel" />
+              <a href="https://www.youtube.com/@user-rr1vx4vc8s" target="_blank" rel="noopener noreferrer">
+
+                <ButtonBox text="View Youtube Channel"/>
+
+</a>
+
               </div>
             </div>
           </div>
           {/* Experience section   */}
 
-          <div className=" max-w-[90%]  2xl:max-w-[70%] mx-auto ">
-            <div className="my-16 lg:my-32">
-              <h1 className="border-y font-bold text-xl lg:text-4xl text-center mb-16 font-smalltech py-4 mb-20 mt-20 ">
-                EXPERIENCE GALLERY
-              </h1>
-            </div>
-
-            <div className="grid lg:grid-cols-3">
-            <div>
-                <img src={Exp1} className="w-[400px] lg:h-[300px]" />
-                <p className="font-bignote my-4 lg:mt-8 lg:mb-3 text-[20px]">
-                  Google I/O 2024 Shoreline CA
-                </p>
-              </div>
-            <div>
-                <img src={Exp2} className="w-[400px] lg:h-[300px]" />
-                <p className="font-bignote my-4 lg:mt-8 lg:mb-3 text-[20px]">
-                  AWS Reinvet 2023 Las Vegas
-                </p>
-              </div>
-              
-            
-              <div>
-                <img src={Exp3} className="w-[400px] lg:h-[300px]" />
-                <p className="font-bignote mt-8 mb-3 text-[20px]">
-                  Esentry Cybersecurity Hackhaton 2021
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center my-10">
-              <ButtonBox text="View More Pictures" />
-            </div>
-          </div>
+          <ExperienceGallery />
 
           {/* Blog section   */}
           <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">

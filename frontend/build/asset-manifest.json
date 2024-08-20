@@ -1,16 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.4344a27f.css",
-    "main.js": "/static/js/main.cf4fcb26.js",
+    "main.css": "/static/css/main.a148170b.css",
+    "main.js": "/static/js/main.a911dc94.js",
+    "static/media/Defcon1.jpeg": "/static/media/Defcon1.719cf2fba057c19bfdce.jpeg",
     "static/media/cyber1 (2).jpg": "/static/media/cyber1 (2).7d535815e88e29dd7060.jpg",
     "static/media/cyber1 (3).jpg": "/static/media/cyber1 (3).f295d7744789b19a37e8.jpg",
+    "static/media/running.gif": "/static/media/running.9baff46e3e7b468eb28a.gif",
     "static/media/cyber1 (4).jpg": "/static/media/cyber1 (4).99fbf37477093f97d068.jpg",
     "static/media/cyber1 (5).jpg": "/static/media/cyber1 (5).0b70f36a035fc233f665.jpg",
     "static/media/cyber1 (1).jpg": "/static/media/cyber1 (1).714b25e74747b9edc258.jpg",
     "static/media/exp3.jpg": "/static/media/exp3.881493063adc6b11bab1.jpg",
     "static/media/reinvent.PNG": "/static/media/reinvent.44cad9dd8e99dd563618.PNG",
+    "static/media/iluvaws.jpg": "/static/media/iluvaws.285e5120106934af99b9.jpg",
+    "static/media/blackhatwide.jpg": "/static/media/blackhatwide.8505a0e3462297d2a728.jpg",
+    "static/media/reinf.jpg": "/static/media/reinf.e8051af901bf3508c676.jpg",
+    "static/media/techequity.jpg": "/static/media/techequity.5af48154ea10b20a0df7.jpg",
     "static/media/project2.png": "/static/media/project2.24ff26157a50b698d79b.png",
     "static/media/exp2.jpeg": "/static/media/exp2.5f4a2776ae2b5b14712d.jpeg",
+    "static/media/ABW cohort.jpg": "/static/media/ABW cohort.bde1dec48041d11c97a8.jpg",
+    "static/media/iocali.jpg": "/static/media/iocali.52e8b873ecc6cab1a9c9.jpg",
+    "static/media/philly.jpg": "/static/media/philly.3a6de9433e5b7e2609a5.jpg",
+    "static/media/ep3.jpg": "/static/media/ep3.36ff66ac021d58cc0f11.jpg",
+    "static/media/blackhat.jpeg": "/static/media/blackhat.9409c44586f64a4b198c.jpeg",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/exp1.jpeg": "/static/media/exp1.22e81c723c575f1339c0.jpeg",
     "static/media/NSE-4-badge-2.png": "/static/media/NSE-4-badge-2.252a38a7f8d321e24ddd.png",
@@ -31,17 +42,19 @@
     "static/media/ccna_600.png": "/static/media/ccna_600.589b3ed599262e3bf072.png",
     "static/media/dnsanalyze.png": "/static/media/dnsanalyze.725f67d222553ff9ae9c.png",
     "static/media/KFOmCnqEu92Fr1Mu4mxK.woff2": "/static/media/KFOmCnqEu92Fr1Mu4mxK.cb41c1e71debe927815c.woff2",
+    "static/media/linkedin.png": "/static/media/linkedin.b6fe5de3515687849a75.png",
     "static/media/ccnp_security.png": "/static/media/ccnp_security.9f645b7343ef992d98fe.png",
+    "static/media/twitter.webp": "/static/media/twitter.b14ac906ddcde8de4f97.webp",
     "static/media/test2.svg": "/static/media/test2.095a32e22cacdcc4f9ad45c15e845cc2.svg",
     "static/media/test3.svg": "/static/media/test3.728083dff1cc3218f84237596e458eb2.svg",
     "static/media/test4.svg": "/static/media/test4.fa2e1baa951f567d35f4e6d6240822e1.svg",
     "static/media/test.svg": "/static/media/test.5ed8c6165f2be0dcc0b36697dc0755fe.svg",
     "index.html": "/index.html",
-    "main.4344a27f.css.map": "/static/css/main.4344a27f.css.map",
-    "main.cf4fcb26.js.map": "/static/js/main.cf4fcb26.js.map"
+    "main.a148170b.css.map": "/static/css/main.a148170b.css.map",
+    "main.a911dc94.js.map": "/static/js/main.a911dc94.js.map"
   },
   "entrypoints": [
-    "static/css/main.4344a27f.css",
-    "static/js/main.cf4fcb26.js"
+    "static/css/main.a148170b.css",
+    "static/js/main.a911dc94.js"
   ]
 }

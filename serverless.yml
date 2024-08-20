@@ -30,7 +30,7 @@ resources:
           ErrorDocument: index.html
         Tags:
         - Key: "NewTagName"
-          Value: "NewTagValue"
+          Value: "NewTestValue"
         
 
     BtgFrontendPolicy:

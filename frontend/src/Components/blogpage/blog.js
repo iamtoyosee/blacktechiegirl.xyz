@@ -150,9 +150,9 @@ const BlogPage = () => {
             </div>
           </div>
           <img
-            src={"https://api.blacktechiegirl.com/" + posts.cover}
+            src={ posts.cover}
             alt="product "
-            className="h-[400px] mb-10 w-full object-cover object-center cursor-pointer "
+            className="h-[600px] mb-8  w-full object-cover object-center cursor-pointer "
           />
         </div>
 
@@ -160,7 +160,7 @@ const BlogPage = () => {
           <main class="container mx-auto">
             <div
               dangerouslySetInnerHTML={{ __html: posts.content }}
-              className="my-48"
+              className="mb-48"
             />
             <CommentList comments={comments} />
           </main>

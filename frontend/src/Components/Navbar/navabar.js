@@ -92,7 +92,7 @@ const Navbar = () => {
             <nav className="dark:bg-black">
                 <div className=" max-w-[90%] 2xl:max-w-[70%] flex flex-wrap items-center justify-between mx-auto py-4">
                     <a  className="flex items-center">
-                        <p className='text-white font-bold text-2xl cursor-pointer' onClick={() => navigate("/")} >                <img src={Logo} className="" />
+                        <p className='text-white font-bold text-2xl cursor-pointer' onClick={() => navigate("/")} >                <img src={Logo} className="w-14 lg:w-16 " />
                         </p>
                     </a>
                     <button  onClick={() => setShowMenu(!showMenu)} data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
