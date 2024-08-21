@@ -5,9 +5,9 @@ function CommentList({ comments }) {
   if (comments.length === 0) {
     return (
       <div className="text-center my-16  py-8  shadow-2xl">
-        <p className="text-4xl font-semibold my-4">Start the conversation</p>
-        <p className="my-8 ">No need to sign up, Tell me what you think !</p>
-        <div className="m-8 mx-24">
+        <p className="text-2xl lg:text-4xl font-bignote md:my-4">Start the conversation</p>
+        <p className="mt-1 md:my-8 ">No need to sign up, Tell me what you think !</p>
+        <div className="m-8 md:mx-24">
           <CommentForm />
         </div>
       </div>

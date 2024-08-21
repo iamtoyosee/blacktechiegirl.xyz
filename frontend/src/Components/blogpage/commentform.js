@@ -14,7 +14,7 @@ function CommentForm({ addComment }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit} className="md:mb-4">
       <input
         type="text"
         value={name}
@@ -28,12 +28,12 @@ function CommentForm({ addComment }) {
         onChange={(e) => setComment(e.target.value)}
         placeholder="Enter a constructive comment"
         className="w-full p-2 border border-gray-300 rounded mb-2"
-        rows="4"
+        rows="6"
         required
       />
       <button
         type="submit"
-        className="bg-gradient-to-r from-indigo-800 via-purple-800 to-fuchsia-600 text-white py-2 px-4 mt-8 rounded hover:bg-blue-600"
+        className="bg-gradient-to-r from-indigo-800 via-purple-800 to-fuchsia-600 text-white py-2 px-4 mt-2 md:mt-8 rounded hover:bg-blue-600"
       >
         Add a Comment
       </button>

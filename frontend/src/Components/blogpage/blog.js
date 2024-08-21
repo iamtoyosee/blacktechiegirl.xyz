@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import hljs from "highlight.js";
 import 'highlight.js/styles/github.css'; 
 import css from "highlight.js/lib/languages/css";
+import Footer from "../Footer/Footer";
 
 
 
@@ -114,7 +115,7 @@ const BlogPage = () => {
       <div className="w-[90%] max-w-[1000px]  mx-auto py-10">
         <div className="px-3 mt-16">
           <div className="flex justify-between">
-            <p className="text-gray-400 font-bold pt-[50px] pb-2 text-xl ">
+            <p className="text-gray-400 font-bold md:pt-[50px] pb-2 text-xl font-lvreg ">
               category
             </p>
             {token && (
@@ -145,7 +146,7 @@ const BlogPage = () => {
               className="h-[60px] w-[60px] md:h-[100px]  md:w-[100px] rounded-full  object-cover object-center border-2 p-1 border-[#d6a419] duration-500 ease-in"
             />
             <div className="mx-5 flex flex-col justify-center ">
-              <p className="font-lvreg font-bold md:text-2xl">BlackTechieGirl</p>
+              <p className="font-lvreg font-bold text-lg md:text-2xl">BlackTechieGirl</p>
               <p className="text-gray-400 text-[10px] lg:text-lg">Jun 22, 2023 • 13 min read</p>
             </div>
           </div>
@@ -160,12 +161,15 @@ const BlogPage = () => {
           <main class="container mx-auto">
             <div
               dangerouslySetInnerHTML={{ __html: posts.content }}
-              className="mb-48"
+              className="lg:mb-48"
             />
             <CommentList comments={comments} />
           </main>
         </div>
+
+  
       </div>
+      <Footer/>
     </div>
   );
 };
