@@ -5,7 +5,7 @@ import Proto1 from "./assets/blogimage1.avif";
 import Proto2 from "./assets/blogimage2.avif";
 import Proto3 from "./assets/blogimage3.avif";
 import Proj1 from "./assets/dnsanalyze.png";
-import Proj2 from "./assets/project2.png";
+import Proj2 from "./assets/scanner.webp";
 import Proj3 from "./assets/project3.png";
 import Test1 from "./assets/test.svg";
 import Test2 from "./assets/test2.svg";
@@ -183,9 +183,9 @@ function App() {
 
              {/* Blog section   */}
              <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
-            <div className="my-16 lg:my-16">
-              <h1 className=" font-bold text-2xl lg:text-4xl text-center font-smalltech py-4  mt-20">
-                LET'S LEARN SOMETHING NEW
+            <div className="my-16">
+              <h1 className=" font-bold text-2xl lg:text-4xl text-center font-smalltech py-4  md:mt-20 border-y">
+                LEARN SOMETHING NEW
               </h1>
             </div>
               

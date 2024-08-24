@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/navabar";
 import { format } from "date-fns";
+import infinityLoader from "../../assets/infinity.svg";
+
 
 const Content = ({ filterString }) => {
   const productRef = useRef(null);
@@ -42,7 +44,24 @@ const Content = ({ filterString }) => {
     fetchPosts();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
+
+  if (loading)
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 duration-700 ease-in mb-10">
+        {Array.from({ length: 6 }).map((_, index) => (
+          <div key={index} className="cursor-pointer w-[90%] mx-auto">
+            <div className="h-[200px] w-full bg-gray-300 animate-pulse rounded-sm"></div>
+            <div className="top-[50%] w-full mt-6">
+              <div className="h-5 bg-gray-300 rounded-full animate-pulse lg:text-xl w-full mb-3"></div>
+              <div className="h-4 bg-gray-300 rounded-full animate-pulse lg:text-[20px] w-5/6 mb-3"></div>
+              <div className="flex justify-between">
+                <div className="h-3 bg-gray-300 rounded-full animate-pulse w-1/2"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   if (error) return <div>{error}</div>;
 
   return (

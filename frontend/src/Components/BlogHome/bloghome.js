@@ -58,7 +58,7 @@ const Bloghome = () => {
         <div>loading</div>
       ) : (
         <div className="lg:grid lg:grid-cols-5 gap-20">
-          <div className="lg:col-span-3  border-2 p-6 mb-4">
+          <div className="lg:col-span-3  border-2 p-4 lg:p-6 mb-4">
             <div
               className="cursor-pointer"
               onClick={() => navigate("/blog/" + favBlog._id)}
@@ -95,7 +95,7 @@ const Bloghome = () => {
             {posts.map((item, index) => {
               return (
                 <div
-                  className="cursor-pointer border-2 p-6"
+                  className="cursor-pointer border-2 p-4 lg:p-6"
                   onClick={() => navigate("/blog/" + item._id)}
                 >
                   <img

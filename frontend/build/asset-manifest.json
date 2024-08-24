@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4798b3f5.css",
-    "main.js": "/static/js/main.1f4908f2.js",
+    "main.css": "/static/css/main.205fb07a.css",
+    "main.js": "/static/js/main.6a2d12cc.js",
     "static/media/Defcon1.jpeg": "/static/media/Defcon1.719cf2fba057c19bfdce.jpeg",
     "static/media/cyber1 (2).jpg": "/static/media/cyber1 (2).7d535815e88e29dd7060.jpg",
     "static/media/cyber1 (3).jpg": "/static/media/cyber1 (3).f295d7744789b19a37e8.jpg",
@@ -10,12 +10,12 @@
     "static/media/cyber1 (5).jpg": "/static/media/cyber1 (5).0b70f36a035fc233f665.jpg",
     "static/media/cyber1 (1).jpg": "/static/media/cyber1 (1).714b25e74747b9edc258.jpg",
     "static/media/exp3.jpg": "/static/media/exp3.881493063adc6b11bab1.jpg",
+    "static/media/scanner.webp": "/static/media/scanner.1c6ec6b6e54b54fc37a9.webp",
     "static/media/reinvent.PNG": "/static/media/reinvent.44cad9dd8e99dd563618.PNG",
     "static/media/iluvaws.jpg": "/static/media/iluvaws.285e5120106934af99b9.jpg",
     "static/media/blackhatwide.jpg": "/static/media/blackhatwide.8505a0e3462297d2a728.jpg",
     "static/media/reinf.jpg": "/static/media/reinf.e8051af901bf3508c676.jpg",
     "static/media/techequity.jpg": "/static/media/techequity.5af48154ea10b20a0df7.jpg",
-    "static/media/project2.png": "/static/media/project2.24ff26157a50b698d79b.png",
     "static/media/exp2.jpeg": "/static/media/exp2.5f4a2776ae2b5b14712d.jpeg",
     "static/media/ABW cohort.jpg": "/static/media/ABW cohort.bde1dec48041d11c97a8.jpg",
     "static/media/iocali.jpg": "/static/media/iocali.52e8b873ecc6cab1a9c9.jpg",
@@ -50,11 +50,12 @@
     "static/media/test4.svg": "/static/media/test4.fa2e1baa951f567d35f4e6d6240822e1.svg",
     "static/media/test.svg": "/static/media/test.5ed8c6165f2be0dcc0b36697dc0755fe.svg",
     "index.html": "/index.html",
-    "main.4798b3f5.css.map": "/static/css/main.4798b3f5.css.map",
-    "main.1f4908f2.js.map": "/static/js/main.1f4908f2.js.map"
+    "static/media/infinity.svg": "/static/media/infinity.77377b686cac2435ea6cdd755c60c181.svg",
+    "main.205fb07a.css.map": "/static/css/main.205fb07a.css.map",
+    "main.6a2d12cc.js.map": "/static/js/main.6a2d12cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.4798b3f5.css",
-    "static/js/main.1f4908f2.js"
+    "static/css/main.205fb07a.css",
+    "static/js/main.6a2d12cc.js"
   ]
 }

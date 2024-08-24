@@ -21,7 +21,7 @@ const About = () => {
         <div className="bg-gray-200  ">
           <div className=" duration-700 max-w-[90%]  2xl:max-w-[70%] mx-auto lg:grid lg:grid-cols-2 py-20">
             <div className="lg:max-w-[90%] pt-10 lg:pt-32">
-              <h1 className=" font-smalltech font-bold text-left  text-[75px] lg:text-[100px] md:text-[35px] lg:py-4">
+              <h1 className=" font-smalltech font-bold text-left  text-[55px] lg:text-[100px]  lg:py-4">
                 {/* Toyosi Usman is a security +<br></br>software engineer. */}
                 So who am I ?
               </h1>
@@ -48,9 +48,9 @@ const About = () => {
                 I am an advocate for synergy, a co-creator in projects that redefine norms. Together, we possess the power to shape the future of technology. Let's Connect and Ignite Transformation ✨🚀
                 </p> */}
 
-                <div className="flex justify-between mt-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 mt-4">
                   <div className="flex items-center cursor-pointer">
-                    <img src={FaYoutube} className="md:w-6 md:h-6  w-5 h-5 " />
+                    <img src={FaYoutube} className=" w-8 h-6 " />
                     <a
                       href="https://www.youtube.com/@user-rr1vx4vc8s"
                       className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 align-text-top"
@@ -59,7 +59,7 @@ const About = () => {
                     </a>
                   </div>
                   <div className="flex items-center cursor-pointer">
-                    <img src={FaLinkedIn} className="w-6 h-6" />
+                    <img src={FaLinkedIn} className="w-8 h-8" />
                     <a
                       href="https://www.linkedin.com/in/aminat-usman-5169b6173/"
                       className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 "
@@ -68,7 +68,7 @@ const About = () => {
                     </a>
                   </div>
                   <div className="flex items-center cursor-pointer">
-                    <img src={FaGithub} className="w-6 h-6" />
+                    <img src={FaGithub} className="w-8 h-8" />
                     <a
                       href="https://github.com/iamtoyosee"
                       className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 "
@@ -77,10 +77,10 @@ const About = () => {
                     </a>
                   </div>
                   <div className="flex items-center cursor-pointer">
-                    <img src={FaTwitter} className="w-8 h-8" />
+                    <img src={FaTwitter} className="w-10 h-10" />
                     <a
                       href="https://x.com/BTG1011"
-                      className="mx-1 md:mx-3 underline underline-offset-2 unde text-gray-600 "
+                      className="mx-1 md:mx-2 underline underline-offset-2 unde text-gray-600 "
                     >
                       Twitter
                     </a>

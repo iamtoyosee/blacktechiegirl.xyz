@@ -32,8 +32,6 @@ const Article = () => {
     fetchPosts();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
 
   return (
     <div>
@@ -45,7 +43,7 @@ const Article = () => {
         </h1>
       </div>
       <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
-       <Content />
+        <Content />
       </div>
     </div>
   );

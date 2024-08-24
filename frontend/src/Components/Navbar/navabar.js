@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import Logo from "../../assets/infini.png";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
@@ -10,6 +11,7 @@ const Navbar = () => {
 
   const logout = () => {
     localStorage.removeItem("authToken");
+    navigate("/"); // Optionally redirect after logout
   };
 
   return (
@@ -17,14 +19,12 @@ const Navbar = () => {
       <div
         className={
           showMenu
-            ? "  translate-x-0 duration-500 ease-out"
-            : "  -translate-x-52"
+            ? "translate-x-0 duration-500 ease-out"
+            : "-translate-x-52"
         }
       >
         {showMenu ? (
-          <div
-            className={`h-[100vh] fixed top-0 w-full bg-black text-white font-smalltech`}
-          >
+          <div className="h-[100vh] fixed top-0 w-full bg-black text-white font-smalltech">
             <p
               className="font-bigtech absolute right-5 top-2 cursor-pointer"
               onClick={() => setShowMenu(false)}
@@ -42,7 +42,7 @@ const Navbar = () => {
                 Home
               </li>
               <li
-                className="py-4 px-5  cursor-pointer"
+                className="py-4 px-5 cursor-pointer"
                 onClick={() => {
                   setShowMenu(false);
                   navigate("/about");
@@ -51,7 +51,7 @@ const Navbar = () => {
                 About
               </li>
               <li
-                className="py-4 px-5  cursor-pointer"
+                className="py-4 px-5 cursor-pointer"
                 onClick={() => {
                   setShowMenu(false);
                   navigate("/projects");
@@ -60,16 +60,16 @@ const Navbar = () => {
                 Projects
               </li>
               <li
-                className="py-4 px-5  cursor-pointer"
+                className="py-4 px-5 cursor-pointer"
                 onClick={() => {
                   setShowMenu(false);
-                  navigate("/");
+                  navigate("/youtube");
                 }}
               >
                 Youtube
               </li>
               <li
-                className="py-4 px-5  cursor-pointer"
+                className="py-4 px-5 cursor-pointer"
                 onClick={() => {
                   setShowMenu(false);
                   navigate("/blog");
@@ -79,26 +79,25 @@ const Navbar = () => {
               </li>
               {token ? (
                 <li
-                    className="py-4 px-5 text-white cursor-pointer"
-                    onClick={() => logout()}
-                  >
-                    Logout
-                  </li>
+                  className="py-4 px-5 text-white cursor-pointer"
+                  onClick={logout}
+                >
+                  Logout
+                </li>
               ) : null}
             </ul>
           </div>
         ) : null}
       </div>
       <nav className="dark:bg-black">
-        <div className=" max-w-[90%] 2xl:max-w-[70%] flex flex-wrap items-center justify-between mx-auto py-4">
+        <div className="max-w-[90%] 2xl:max-w-[70%] flex flex-wrap items-center justify-between mx-auto py-4">
           <a className="flex items-center">
-            <p
-              className="text-white font-bold text-2xl cursor-pointer"
+            <img
+              src={Logo}
+              className="w-12 lg:w-16 cursor-pointer"
+              alt="Logo"
               onClick={() => navigate("/")}
-            >
-              {" "}
-              <img src={Logo} className="w-12 lg:w-16 " />
-            </p>
+            />
           </a>
           <button
             onClick={() => setShowMenu(!showMenu)}
@@ -117,59 +116,71 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border lg:text-[18px]  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border lg:text-[18px] md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
-                <a
-                  href="#"
-                  className="block p-2 ml-3 mr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
-                  onClick={() => navigate("/")}
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block p-2 ml-3 mr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      : "block p-2 ml-3 mr-4 font-smalltech text-white"
+                  }
                 >
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 font-smalltech text-white  "
-                  onClick={() => navigate("/about")}
+                <NavLink
+                  to="/about"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      : "block py-2 pl-3 pr-4 font-smalltech text-white"
+                  }
                 >
                   About
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 font-smalltech text-white  "
-                  onClick={() => navigate("/projects")}
+                <NavLink
+                  to="/projects"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      : "block py-2 pl-3 pr-4 font-smalltech text-white"
+                  }
                 >
                   Projects
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 font-smalltech text-white  "
-                  onClick={() => navigate("/blog")}
+                <NavLink
+                  to="/blog"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      : "block py-2 pl-3 pr-4 font-smalltech text-white"
+                  }
                 >
                   Blog
-                </a>
+                </NavLink>
               </li>
               {token ? (
                 <li>
-                  <a
-                    href="#"
-                    className="block py-2 pl-3 pr-4 font-smalltech text-white  "
-                    onClick={() => logout()}
+                  <NavLink
+                    to="/"
+                    className="block py-2 pl-3 pr-4 font-smalltech text-white"
+                    onClick={logout}
                   >
                     Logout
-                  </a>
+                  </NavLink>
                 </li>
               ) : null}
             </ul>
