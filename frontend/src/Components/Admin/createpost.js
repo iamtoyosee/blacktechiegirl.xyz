@@ -214,7 +214,7 @@ const Admin = () => {
 
     console.log(data);
     try {
-      const response = await fetch("http://localhost:8080/post", {
+      const response = await fetch("https://api.blacktechiegirl.com/post", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // Include the token here

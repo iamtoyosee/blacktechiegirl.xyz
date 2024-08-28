@@ -153,7 +153,7 @@ const BlogPage = () => {
           <img
             src={ posts.cover}
             alt="product "
-            className="lg:h-[600px] mb-8  w-full object-cover object-center cursor-pointer "
+            className="lg:h-[600px] my-8  w-full object-cover object-center cursor-pointer "
           />
         </div>
 

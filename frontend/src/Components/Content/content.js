@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/navabar";
 import { format } from "date-fns";
 import infinityLoader from "../../assets/infinity.svg";
-
+import { ButtonBox } from "../Button/button";
 
 const Content = ({ filterString }) => {
   const productRef = useRef(null);
@@ -44,10 +44,9 @@ const Content = ({ filterString }) => {
     fetchPosts();
   }, []);
 
-
   if (loading)
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 duration-700 ease-in mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 duration-700 ease-in mb-10">
         {Array.from({ length: 6 }).map((_, index) => (
           <div key={index} className="cursor-pointer w-[90%] mx-auto">
             <div className="h-[200px] w-full bg-gray-300 animate-pulse rounded-sm"></div>
@@ -72,7 +71,7 @@ const Content = ({ filterString }) => {
       {posts.map((item, index) => {
         return (
           <div
-            className="cursor-pointer"
+            className={filterString === 'project' ? "cursor-pointer text-center ":" cursor-pointer"}
             onClick={() => navigate("/blog/" + item._id)}
           >
             <img
@@ -82,17 +81,36 @@ const Content = ({ filterString }) => {
               onClick={() => navigate(item.url)}
             />
             <div className=" top-[50%] w-full">
-              <p className="font-bignote mt-6 lg:text-xl">{item.title}</p>
+              <p className="font-bignote mt-6 lg:text-xl line-clamp-2">
+                {item.title}
+              </p>
 
-              <h1 className="lg:text-xl font-bignote">{item.text}</h1>
-              <p className="font-smalltech lg:text-[20px] ">{item.summary}</p>
-              <div className="flex justify-between">
-                <p className="text-gray-400 ">
-                  {" "}
-                  {format(new Date(item.createdAt), "MMM d, yyyy")} • 13 min
-                  read
-                </p>
-              </div>
+              <h1 className="lg:text-xl font-bignote line-clamp-2">
+                {item.text}
+              </h1>
+              <p className="font-smalltech lg:text-[20px] line-clamp-2 ">
+                {item.summary}
+              </p>
+
+              {filterString === 'project' ? (
+                <div className="flex justify-center mt-4 lg:mt-10">
+                  <a
+                    href="https://github.com/iamtoyosee/DNS-Analyzer/tree/main"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ButtonBox text="View Project" />
+                  </a>
+                </div>
+              ) : (
+                <div className="flex justify-between mt-1">
+                  <p className="text-gray-400 ">
+                    {" "}
+                    {format(new Date(item.createdAt), "MMM d, yyyy")} • 13 min
+                    read
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         );

@@ -209,6 +209,8 @@ function App() {
               </h1>
             </div>
 
+            <Content filterString={'project'}/>
+{/* 
             <div className="grid lg:grid-cols-3 gap-10 mb-[120px] text-center">
               <div>
                 <img src={Proj1} className="h-[250px] w-full" />
@@ -267,7 +269,7 @@ function App() {
                   </a>{" "}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Video section   */}
