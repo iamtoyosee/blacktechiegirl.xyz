@@ -15,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 w-full overscroll-none z-50">
+    <div className="fixed top-0 w-full overscroll-none z-50 bg-black">
       <div
         className={
           showMenu
@@ -89,7 +89,7 @@ const Navbar = () => {
           </div>
         ) : null}
       </div>
-      <nav className="dark:bg-black">
+      <nav className="bg-black">
         <div className="max-w-[90%] 2xl:max-w-[70%] flex flex-wrap items-center justify-between mx-auto py-4">
           <a className="flex items-center">
             <img
