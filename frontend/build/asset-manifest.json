@@ -1,14 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3920c49.css",
-    "main.js": "/static/js/main.bd504150.js",
+    "main.css": "/static/css/main.dac0130f.css",
+    "main.js": "/static/js/main.e5497110.js",
     "static/media/Defcon1.jpeg": "/static/media/Defcon1.719cf2fba057c19bfdce.jpeg",
-    "static/media/cyber1 (2).jpg": "/static/media/cyber1 (2).7d535815e88e29dd7060.jpg",
-    "static/media/cyber1 (3).jpg": "/static/media/cyber1 (3).f295d7744789b19a37e8.jpg",
     "static/media/running.gif": "/static/media/running.9baff46e3e7b468eb28a.gif",
-    "static/media/cyber1 (4).jpg": "/static/media/cyber1 (4).99fbf37477093f97d068.jpg",
     "static/media/cyber1 (5).jpg": "/static/media/cyber1 (5).0b70f36a035fc233f665.jpg",
-    "static/media/cyber1 (1).jpg": "/static/media/cyber1 (1).714b25e74747b9edc258.jpg",
     "static/media/exp3.jpg": "/static/media/exp3.881493063adc6b11bab1.jpg",
     "static/media/scanner.webp": "/static/media/scanner.1c6ec6b6e54b54fc37a9.webp",
     "static/media/reinvent.PNG": "/static/media/reinvent.44cad9dd8e99dd563618.PNG",
@@ -19,13 +15,13 @@
     "static/media/exp2.jpeg": "/static/media/exp2.5f4a2776ae2b5b14712d.jpeg",
     "static/media/ABW cohort.jpg": "/static/media/ABW cohort.bde1dec48041d11c97a8.jpg",
     "static/media/iocali.jpg": "/static/media/iocali.52e8b873ecc6cab1a9c9.jpg",
+    "static/media/WorkSans-Regular.ttf": "/static/media/WorkSans-Regular.7c5aca8a8c320a8df026.ttf",
     "static/media/ep3.jpg": "/static/media/ep3.36ff66ac021d58cc0f11.jpg",
     "static/media/blackhat.jpeg": "/static/media/blackhat.9409c44586f64a4b198c.jpeg",
     "static/media/aminat.jpg": "/static/media/aminat.ce2e48331fdd6f4ada5d.jpg",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
     "static/media/exp1.jpeg": "/static/media/exp1.22e81c723c575f1339c0.jpeg",
     "static/media/NSE-4-badge-2.png": "/static/media/NSE-4-badge-2.252a38a7f8d321e24ddd.png",
-    "static/media/proto6.jpg": "/static/media/proto6.c5a4449140e9b374441a.jpg",
     "static/media/blogimage1.avif": "/static/media/blogimage1.1f6725116dbfacd78f40.avif",
     "static/media/blogimage2.avif": "/static/media/blogimage2.157d0fa4948983897a77.avif",
     "static/media/philly.jpg": "/static/media/philly.c217ff3890a9e2141f5c.jpg",
@@ -44,6 +40,7 @@
     "static/media/KFOmCnqEu92Fr1Mu4mxK.woff2": "/static/media/KFOmCnqEu92Fr1Mu4mxK.cb41c1e71debe927815c.woff2",
     "static/media/linkedin.png": "/static/media/linkedin.b6fe5de3515687849a75.png",
     "static/media/ccnp_security.png": "/static/media/ccnp_security.9f645b7343ef992d98fe.png",
+    "static/media/aminata.jpg": "/static/media/aminata.e411544eefbc96c4d827.jpg",
     "static/media/twitter.webp": "/static/media/twitter.b14ac906ddcde8de4f97.webp",
     "static/media/test2.svg": "/static/media/test2.095a32e22cacdcc4f9ad45c15e845cc2.svg",
     "static/media/test3.svg": "/static/media/test3.728083dff1cc3218f84237596e458eb2.svg",
@@ -51,11 +48,11 @@
     "static/media/test.svg": "/static/media/test.5ed8c6165f2be0dcc0b36697dc0755fe.svg",
     "index.html": "/index.html",
     "static/media/infinity.svg": "/static/media/infinity.77377b686cac2435ea6cdd755c60c181.svg",
-    "main.c3920c49.css.map": "/static/css/main.c3920c49.css.map",
-    "main.bd504150.js.map": "/static/js/main.bd504150.js.map"
+    "main.dac0130f.css.map": "/static/css/main.dac0130f.css.map",
+    "main.e5497110.js.map": "/static/js/main.e5497110.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3920c49.css",
-    "static/js/main.bd504150.js"
+    "static/css/main.dac0130f.css",
+    "static/js/main.e5497110.js"
   ]
 }
