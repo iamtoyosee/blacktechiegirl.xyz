@@ -12,7 +12,8 @@ module.exports = {
         lvreg: ["lvreg", "sans-serif"],
         lvbold: ["lvbold", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
-        popreg: ["poppinsreg", "sans-serif"]
+        popreg: ["poppinsreg", "sans-serif"],
+        worksans: ["worksans", "sans-serif"]
 
       },
     },

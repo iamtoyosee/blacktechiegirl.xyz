@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar/navabar";
 // import Proto1 from "../../assets/blogimage1.avif";
-import Proto6 from "../../assets/proto6.jpg";
+import Proto6 from "../../assets/aminata.jpg";
 import Proto1 from "../../assets/cyber1 (5).jpg";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -146,7 +146,7 @@ const BlogPage = () => {
               className="h-[60px] w-[60px] md:h-[100px]  md:w-[100px] rounded-full  object-cover object-center border-2 p-1 border-[#d6a419] duration-500 ease-in"
             />
             <div className="mx-5 flex flex-col justify-center ">
-              <p className="font-lvreg font-bold text-lg md:text-2xl">BlackTechieGirl</p>
+              <p className="font-lvreg font-bold text-lg md:text-2xl">Toyosi Usman</p>
               <p className="text-gray-400 text-[10px] lg:text-lg">Jun 22, 2023 • 13 min read</p>
             </div>
           </div>
@@ -157,11 +157,11 @@ const BlogPage = () => {
           />
         </div>
 
-        <div className=" font-smalltech md:text-2xl">
+        <div className=" font-worksans md:text-lg">
           <main class="container mx-auto">
             <div
               dangerouslySetInnerHTML={{ __html: posts.content }}
-              className="lg:mb-48"
+              className="lg:mb-48 "
             />
             <CommentList comments={comments} />
           </main>

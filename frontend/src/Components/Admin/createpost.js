@@ -17,8 +17,7 @@ AWS.config.update({
 });
 const s3 = new AWS.S3(); // Create an S3 instance
 
-
-console.log(process.env.REACT_APP_ACCESS_KEY_ID)
+console.log(process.env.REACT_APP_ACCESS_KEY_ID);
 
 const toolbarOptions = [
   ["bold", "italic", "underline", "strike"], // toggled buttons
@@ -68,6 +67,8 @@ const Admin = () => {
   const [title, setTitle] = useState("");
   const [summary, setSummary] = useState("");
   const [content, setContent] = useState("");
+  const [category, setCategory] = useState("");
+  const [github, setGithub] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [files, setFiles] = useState(""); // Set initial files state to null
@@ -144,6 +145,8 @@ const Admin = () => {
           setContent(postData.data.content);
           setSummary(postData.data.summary);
           setFiles(postData.data.cover);
+          setCategory(postData.data.category);
+          setGithub(postData.data.github);
           setTagsArray(postData.data.tags);
           console.log(postData.data);
           setLoading(false);
@@ -183,14 +186,14 @@ const Admin = () => {
   };
 
   const handleTags = (ev) => {
-    ev.preventDefault()
+    ev.preventDefault();
     setTagsArray((prevTagsArray) => [...prevTagsArray, tags]); // Update state properly
     console.log(tagsArray);
     setTags("");
   };
 
   const removeTag = (index, ev) => {
-    ev.preventDefault()
+    ev.preventDefault();
     setTagsArray((currentTags) =>
       currentTags.filter((_, idx) => idx !== index)
     );
@@ -204,7 +207,9 @@ const Admin = () => {
     data.set("summary", summary);
     data.set("content", content);
     data.set("cover", files);
-    data.set("author", "blacktechiegirl");
+    data.set("author", "Toyosi Usman");
+    data.set("category", category);
+    data.set("github", github);
     // Append each tag as a separate entry
     tagsArray.forEach((tag) => {
       data.append("tags[]", tag);
@@ -247,11 +252,14 @@ const Admin = () => {
     data.set("summary", summary);
     data.set("content", content);
     data.set("cover", files);
-    data.set("author", "blacktechiegirl");
-// Append each tag as a separate entry
-tagsArray.forEach(tag => {
-  data.append("tags[]", tag);
-});
+    data.set("author", "Toyosi Usman");
+    data.set("category", category);
+    data.set("github", github);
+
+    // Append each tag as a separate entry
+    tagsArray.forEach((tag) => {
+      data.append("tags[]", tag);
+    });
     setError("");
     setSuccess("");
 
@@ -301,6 +309,25 @@ tagsArray.forEach(tag => {
           value={summary}
           onChange={(ev) => setSummary(ev.target.value)}
         />
+
+
+    <div className="flex justify-between">
+        <input
+          className="m-4 border-2 rounded-sm p-4 w-full"
+          type="text"
+          placeholder="Project URL"
+          value={category}
+          onChange={(ev) => setCategory(ev.target.value)}
+        />
+
+        <input
+          className="m-4 border-2 rounded-sm p-4 w-full"
+          type="text"
+          placeholder="Enter Github URL"
+          value={github}
+          onChange={(ev) => setGithub(ev.target.value)}
+        />
+        </div>
 
         <div>
           {tagsArray.length > 0 && (

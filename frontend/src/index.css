@@ -37,4 +37,16 @@
     font-family: "poppinsreg";
     src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
   }
+
+  @font-face {
+    font-family: "worksans";
+    src: url("./assets/fonts/Work_Sans/static/WorkSans-Regular.ttf");
+  }
+  
+  @layer base {
+    .ql-size-huge{
+      font-size: 2.0rem !important;
+    }
+    
+  }
   

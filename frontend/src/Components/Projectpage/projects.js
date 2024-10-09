@@ -1,14 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/navabar";
-import Proto1 from "../../assets/blogimage1.avif";
-import Proto2 from "../../assets/blogimage2.avif";
-import Proto3 from "../../assets/blogimage3.avif";
-import Proto4 from "../../assets/cyber1 (1).jpg";
-import Proto5 from "../../assets/cyber1 (2).jpg";
-import Proto6 from "../../assets/cyber1 (3).jpg";
-import Proto7 from "../../assets/cyber1 (4).jpg";
-import Proto8 from "../../assets/cyber1 (5).jpg";
+
 
 const Project = () => {
   const productRef = useRef(null);
@@ -43,53 +36,7 @@ const Project = () => {
 
     fetchPosts();
   }, []);
-  const categoryObj = [
-    {
-      imgUrl: Proto1,
-      url: "/blog",
-      text: "Domain Name System Researcher",
-    },
-    {
-      imgUrl: Proto2,
-      url: "/blog",
-      text: "Interactive Packet Manipulation Tool",
-    },
-    {
-      imgUrl: Proto3,
-      url: "/blog",
-      text: "Weaponization Techniques",
-    },
-    {
-      imgUrl: Proto4,
-      url: "/blog",
-      text: "Over-Engineering my Storage",
-    },
-    {
-      imgUrl: Proto5,
-      url: "/blog",
-      text: "Red-Team Capstone Challenge",
-    },
-    {
-      imgUrl: Proto6,
-      url: "/blog",
-      text: "Weaponization Techniques",
-    },
-    {
-      imgUrl: Proto7,
-      url: "/blog",
-      text: "Over-Engineering my Storage",
-    },
-    {
-      imgUrl: Proto2,
-      url: "/blog",
-      text: "Red-Team Capstone Challenge",
-    },
-    {
-      imgUrl: Proto8,
-      url: "/blog",
-      text: "Weaponization Techniques",
-    },
-  ];
+;
   return (
     <div>
       <Navbar className="" />
@@ -127,11 +74,14 @@ const Project = () => {
                   <div className=" grid grid-cols-2 gap-5 lg:gap-20 lg:max-w-[80%] py-10">
                     <button
                       className="font-smalltech text-[18px] text-gray py-2 lg:py-4 border border-black  hover:bg-black hover:text-white duration-300 ease-in  "
-                      onClick={() => navigate("/blog/" + item._id)}
+                      onClick={() => item.category != "undefined"? window.location.href = item.category: navigate(`/blog/${item._id}`)}
                     >
                       View Project
                     </button>
-                    <button className="font-smalltech text-[18px] text-gray py-2  lg:py-4  border border-black  hover:bg-black hover:text-white  duration-300 ease-in  ">
+                    <button className="font-smalltech text-[18px] text-gray py-2  lg:py-4  border border-black  hover:bg-black hover:text-white  duration-300 ease-in  "
+                      onClick={() =>  window.location.href = item.github }
+
+                    >
                       View on Github
                     </button>
                   </div>
