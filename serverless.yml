@@ -29,8 +29,8 @@ resources:
           IndexDocument: index.html
           ErrorDocument: index.html
         Tags:
-        - Key: "NewTagName"
-          Value: "NewTestValue"
+        - Key: "ChangeThisTOPush"
+          Value: "ChangeThisTOPush"
         
 
     BtgFrontendPolicy:
