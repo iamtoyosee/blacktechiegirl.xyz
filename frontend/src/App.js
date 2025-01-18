@@ -76,8 +76,8 @@ function App() {
     <div>
       <Navbar />
       <div className="h-[400px] md:h-[500px] lg:h-screen bg-black flex justify-center items-center pt-10">
-        <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote text-[43px] md:text-[75px] lg:text-[85px] 2xl:text-[125px] lg:leading-[150px] text-white text-left font-bold">
-          Think like an attacker, Build like a defender.
+      <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote text-[clamp(2.5rem, 5vw, 6rem)] lg:leading-[1.2] text-white text-left font-bold">
+      Think like an attacker, Build like a defender.
         </h1>
       </div>
       <div className=" ">
