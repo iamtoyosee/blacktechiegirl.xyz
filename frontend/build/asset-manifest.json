@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.53b17990.css",
-    "main.js": "/static/js/main.851991cc.js",
+    "main.js": "/static/js/main.27f39640.js",
     "static/media/Defcon1.jpeg": "/static/media/Defcon1.719cf2fba057c19bfdce.jpeg",
     "static/media/running.gif": "/static/media/running.9baff46e3e7b468eb28a.gif",
     "static/media/cyber1 (5).jpg": "/static/media/cyber1 (5).0b70f36a035fc233f665.jpg",
@@ -20,6 +20,7 @@
     "static/media/blackhat.jpeg": "/static/media/blackhat.9409c44586f64a4b198c.jpeg",
     "static/media/aminat.jpg": "/static/media/aminat.ce2e48331fdd6f4ada5d.jpg",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Most Outstanding.jpeg": "/static/media/Most Outstanding.e746eac78fc3e821abfd.jpeg",
     "static/media/exp1.jpeg": "/static/media/exp1.22e81c723c575f1339c0.jpeg",
     "static/media/NSE-4-badge-2.png": "/static/media/NSE-4-badge-2.252a38a7f8d321e24ddd.png",
     "static/media/blogimage1.avif": "/static/media/blogimage1.1f6725116dbfacd78f40.avif",
@@ -50,10 +51,10 @@
     "index.html": "/index.html",
     "static/media/infinity.svg": "/static/media/infinity.77377b686cac2435ea6cdd755c60c181.svg",
     "main.53b17990.css.map": "/static/css/main.53b17990.css.map",
-    "main.851991cc.js.map": "/static/js/main.851991cc.js.map"
+    "main.27f39640.js.map": "/static/js/main.27f39640.js.map"
   },
   "entrypoints": [
     "static/css/main.53b17990.css",
-    "static/js/main.851991cc.js"
+    "static/js/main.27f39640.js"
   ]
 }

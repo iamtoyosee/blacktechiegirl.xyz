@@ -19,6 +19,7 @@ import Exp12 from "../../assets/ep3.jpg";
 import Exp13 from "../../assets/reinf.jpg";
 import Exp14 from "../../assets/exp2.jpeg";
 import Exp15 from "../../assets/STF2025.jpg";
+import Exp16 from "../../assets/Most Outstanding.jpeg";
 
 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
@@ -33,6 +34,7 @@ const images = [
   { src: Exp15, alt: "Palo Alto Networks 2025", caption: "Palo Alto Networks STF competition 2025" },
   { src: Exp3, alt: "Esentry Hackathon 2021", caption: "Esentry Cybersecurity Hackathon 2021" },
   { src: Exp13, alt: "Esentry Hackathon 2021", caption: "AWS RE:Inforce 2024" },
+  { src: Exp16, alt: "Esentry Hackathon 2021", caption: "Most Outstanding Student Award" },
   { src: Exp6, alt: "Defcon Uncancelled 2024", caption: "ABW Cohort 2024" },
   { src: Exp7, alt: "Defcon Uncancelled 2024", caption: "North America Connect" },
   { src: Exp8, alt: "Defcon Uncancelled 2024", caption: "BlackHat USA" },
