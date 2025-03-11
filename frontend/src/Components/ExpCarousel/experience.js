@@ -18,6 +18,8 @@ import Exp11 from "../../assets/techequity.jpg";
 import Exp12 from "../../assets/ep3.jpg";
 import Exp13 from "../../assets/reinf.jpg";
 import Exp14 from "../../assets/exp2.jpeg";
+import Exp15 from "../../assets/STF2025.jpg";
+
 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 import { ButtonBox } from "../Button/button";
@@ -28,15 +30,16 @@ const images = [
   { src: Exp5, alt: "Defcon Uncancelled 2024", caption: "Defcon Engage 2024" },
   { src: Exp1, alt: "Google I/O 2024", caption: "Google I/O 2024 Shoreline CA" },
   { src: Exp2, alt: "AWS Reinvent 2023", caption: "AWS Reinvent 2023 Las Vegas" },
-  { src: Exp3, alt: "Esentry Hackathon 2021", caption: "Cybersecurity Hackathon 2021" },
+  { src: Exp15, alt: "Palo Alto Networks 2025", caption: "Palo Alto Networks STF competition 2025" },
+  { src: Exp3, alt: "Esentry Hackathon 2021", caption: "Esentry Cybersecurity Hackathon 2021" },
   { src: Exp13, alt: "Esentry Hackathon 2021", caption: "AWS RE:Inforce 2024" },
   { src: Exp6, alt: "Defcon Uncancelled 2024", caption: "ABW Cohort 2024" },
   { src: Exp7, alt: "Defcon Uncancelled 2024", caption: "North America Connect" },
   { src: Exp8, alt: "Defcon Uncancelled 2024", caption: "BlackHat USA" },
   { src: Exp9, alt: "Defcon Uncancelled 2024", caption: "I love AWS" },
-  { src: Exp10, alt: "Defcon Uncancelled 2024", caption: "First Time in Philly" },
+  { src: Exp10, alt: "Defcon Uncancelled 2024", caption: "AWS RE:Inforce Philadelphia" },
   { src: Exp11, alt: "Defcon Uncancelled 2024", caption: "Tech Equity Collective" },
-  { src: Exp14, alt: "Defcon Uncancelled 2024", caption: "Infoprive Girls" },
+  { src: Exp14, alt: "Defcon Uncancelled 2024", caption: "Infoprive Tech Gathering" },
   { src: Exp12, alt: "Defcon Uncancelled 2024", caption: "Open Source Festival 2022" },
 ];
 
@@ -46,9 +49,9 @@ const ExperienceGallery = () => {
 
   return (
     <div className="max-w-[90%] 2xl:max-w-[70%] mx-auto relative">
-      <div className="my-16 lg:my-32">
+      <div className="my-8 lg:my-32">
         <h1 className="border-y font-bold text-xl lg:text-4xl text-center font-smalltech py-4 mb-20 mt-20">
-          EXPERIENCE GALLERY
+          JOURNEY INTO DISCOVERY
         </h1>
       </div>
 
@@ -85,7 +88,7 @@ const ExperienceGallery = () => {
                 className="h-[250px] w-full object-cover object-center"
                 alt={image.alt}
               />
-              <p className="font-bignote my-4 lg:mt-8 mb-20 text-[20px]">
+              <p className="font-popreg font-bold my-4 lg:mt-8 mb-20 text-[20px] text-center">
                 {image.caption}
               </p>
             </div>

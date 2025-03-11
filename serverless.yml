@@ -29,7 +29,7 @@ resources:
           IndexDocument: index.html
           ErrorDocument: index.html
         Tags:
-        - Key: "ChangeThisPush"
+        - Key: "ChangeThisValue"
           Value: "ChangeThisPush"
         
 
