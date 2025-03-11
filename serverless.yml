@@ -30,7 +30,7 @@ resources:
           ErrorDocument: index.html
         Tags:
         - Key: "ChangeThisValue"
-          Value: "ChangeThisPush"
+          Value: "ChangeThisValue"
         
 
     BtgFrontendPolicy:

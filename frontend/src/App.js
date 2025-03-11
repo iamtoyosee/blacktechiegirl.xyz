@@ -76,7 +76,7 @@ function App() {
     <div>
       <Navbar />
       <div className="h-[400px] md:h-[500px] lg:h-screen bg-black flex justify-center items-center pt-10">
-      <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote lg:leading-[1.2] text-[5vw] text-white text-center font-bold">
+      <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote lg:leading-[1.2] text-[7vw] md:text-[5vw] text-white text-center font-bold">
       I want to be a part of the team that builds the future.
         </h1>
       </div>
@@ -88,13 +88,13 @@ function App() {
               <h1 className=" font-worksans font-bold text-left text-[25px] md:text-[30px] py-4">
                 Toyosi Usman is an Innovator +<br></br>Creator.
               </h1>
-              <h1 className=" hidden lg:block text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
+              <h1 className=" text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
               Innovator, Creator, and Software Engineer dedicated to transforming ideas into reality. With a passion for building secure and impactful technologies, I've collaborated with leading engineering teams to design solutions that enhance safety and efficiency. My journey in tech is marked by a commitment to excellence, which has been recognized through prestigious award such as the Most Outstanding Student Award.
               </h1>
               <h1 className="  hidden text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
               Beyond coding, I thrive in the heart of the tech community, mentoring aspiring developers and leading events that spark innovation. I am continuously seeking opportunities to harness my technical expertise and leadership skills to address real-world challenges and drive meaningful change.
               </h1>
-              <h1 className=" text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
+              <h1 className=" hidden lg:block text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
               Beyond coding, I am well-grounded in application security, focusing on crafting solutions that simplify and secure the engineering process. I am an advocate for synergy, a co-creator in projects that
                 redefine norms. Together, we possess the power to shape the
                 future of technology. Let's Connect and Ignite Transformation
