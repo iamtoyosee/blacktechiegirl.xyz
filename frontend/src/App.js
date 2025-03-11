@@ -85,7 +85,10 @@ function App() {
         <>
           <div className="pt-20 max-w-[90%]  2xl:max-w-[70%] mx-auto">
             <div>
-              <h1 className=" font-worksans font-bold text-left text-[25px] md:text-[30px] py-4">
+              <h1 className=" lg:hidden font-worksans font-bold text-left text-[25px] md:text-[30px] py-4">
+                Toyosi Usman is an Innovator + Creator.
+              </h1>
+              <h1 className=" hidden lg:block font-worksans font-bold text-left text-[25px] md:text-[30px] py-4">
                 Toyosi Usman is an Innovator +<br></br>Creator.
               </h1>
               <h1 className=" text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
