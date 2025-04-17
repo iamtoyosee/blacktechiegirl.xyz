@@ -76,8 +76,8 @@ function App() {
     <div>
       <Navbar />
       <div className="h-[400px] md:h-[500px] lg:h-screen bg-black flex justify-center items-center pt-10">
-      <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote lg:leading-[1.2] text-[7vw] md:text-[5vw] text-white text-center font-bold">
-      I want to be a part of the team that builds the future.
+      <h1 className="max-w-[90%] 2xl:max-w-[70%] mx-auto font-bignote lg:leading-[1.2] text-[6vw] text-white font-bold">
+      Think like an attacker,<br></br> Build like a defender.
         </h1>
       </div>
       <div className=" ">
@@ -86,10 +86,10 @@ function App() {
           <div className="pt-20 max-w-[90%]  2xl:max-w-[70%] mx-auto">
             <div>
               <h1 className=" lg:hidden font-worksans font-bold text-left text-[25px] md:text-[30px] py-4">
-                Toyosi Usman is an Innovator + Creator.
+                Aminat Usman is an Innovator + Creator.
               </h1>
               <h1 className=" hidden lg:block font-worksans font-bold text-left text-[25px] md:text-[30px] py-4">
-                Toyosi Usman is an Innovator +<br></br>Creator.
+                Aminat Usman is an Innovator +<br></br>Creator.
               </h1>
               <h1 className=" text-left font-smalltech text-[18px] leading-8 md:leading-10 md:text-[20px] xl:text-[25px] pb-6 lg:max-w-[90%] xl:max-w-[80%]">
               Innovator, Creator, and Software Engineer dedicated to transforming ideas into reality. With a passion for building secure and impactful technologies, I've collaborated with leading engineering teams to design solutions that enhance safety and efficiency. My journey in tech is marked by a commitment to excellence, which has been recognized through prestigious award such as the Most Outstanding Student Award.
