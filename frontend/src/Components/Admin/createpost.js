@@ -265,7 +265,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `https://api.blacktechiegirl.com/post/${postid}`,
+        `https://api.neuroverselab.com/post/${postid}`,
         {
           method: "PATCH",
           headers: {

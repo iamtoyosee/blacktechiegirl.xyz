@@ -14,7 +14,7 @@ const Project = () => {
     window.scrollTo(0, 0);
     const fetchPosts = async () => {
       try {
-        const response = await fetch("https://api.blacktechiegirl.com/post");
+        const response = await fetch("https://api.neuroverselab.com/post");
 
         if (!response.ok) {
           throw new Error("Network response was not ok");

@@ -19,7 +19,7 @@ const RegistrationPage = () => {
     }
 
     try {
-      const response = await fetch('https://api.blacktechiegirl.com/auth/signup', {
+      const response = await fetch('https://api.neuroverselab.com/auth/signup', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },

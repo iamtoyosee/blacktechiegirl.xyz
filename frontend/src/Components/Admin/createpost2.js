@@ -78,7 +78,7 @@ const Admin = () => {
       const fetchData = async () => {
         try {
           const postResponse = await fetch(
-            `https://api.blacktechiegirl.com/post/${postid}`
+            `https://api.neuroverselab.com/post/${postid}`
           );
 
           if (!postResponse.ok) {
@@ -119,7 +119,7 @@ const Admin = () => {
     setSuccess("");
 
     try {
-      const response = await fetch("https://api.blacktechiegirl.com/post", {
+      const response = await fetch("https://api.neuroverselab.com/post", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // Include the token here
@@ -164,7 +164,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `https://api.blacktechiegirl.com/post/${postid}`,
+        `https://api.neuroverselab.com/post/${postid}`,
         {
           method: "PATCH",
           headers: {

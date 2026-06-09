@@ -40,10 +40,10 @@ const BlogPage = () => {
     const fetchData = async () => {
       try {
         const postResponse = await fetch(
-          `https://api.blacktechiegirl.com/post/${postid}`
+          `https://api.neuroverselab.com/post/${postid}`
         );
         // const commentResponse = await fetch(
-        //   `https://api.blacktechiegirl.com/comment/${postid}`
+        //   `https://api.neuroverselab.com/comment/${postid}`
         // );
 
         if (!postResponse.ok) {
@@ -78,7 +78,7 @@ const BlogPage = () => {
     }
 
     try {
-      const response = await fetch(`https://api.blacktechiegirl.com/post/${posts._id}`, {
+      const response = await fetch(`https://api.neuroverselab.com/post/${posts._id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
