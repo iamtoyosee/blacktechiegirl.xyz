@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Navbar/navabar";
+import projectList from "../../data/projects";
 
 
 const Project = () => {
@@ -12,6 +13,11 @@ const Project = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    // Projects now come from src/data/projects.js instead of the API.
+    // TODO(blog): the original API fetch is kept below for when the backend returns.
+    setPosts(projectList);
+    setLoading(false);
+    /*
     const fetchPosts = async () => {
       try {
         const response = await fetch("https://api.neuroverselab.com/post");
@@ -35,6 +41,7 @@ const Project = () => {
     };
 
     fetchPosts();
+    */
   }, []);
 ;
   return (
@@ -50,7 +57,7 @@ const Project = () => {
         <div ref={productRef} class="  duration-700 ease-in mb-10">
           {posts.map((item, index) => {
             return (
-              <div className="border-y lg:grid grid-cols-2 gap-12  py-10 md:py-20">
+              <div key={index} className="border-y lg:grid grid-cols-2 gap-12  py-10 md:py-20">
                 <img
                   src={item.cover}
                   alt="product "
@@ -74,12 +81,12 @@ const Project = () => {
                   <div className=" grid grid-cols-2 gap-5 lg:gap-20 lg:max-w-[80%] py-10">
                     <button
                       className="font-smalltech text-[18px] text-gray py-2 lg:py-4 border border-black  hover:bg-black hover:text-white duration-300 ease-in  "
-                      onClick={() => item.category != "undefined"? window.location.href = item.category: navigate(`/blog/${item._id}`)}
+                      onClick={() => window.open(item.url, "_blank")}
                     >
                       View Project
                     </button>
                     <button className="font-smalltech text-[18px] text-gray py-2  lg:py-4  border border-black  hover:bg-black hover:text-white  duration-300 ease-in  "
-                      onClick={() =>  window.location.href = item.github }
+                      onClick={() => window.open(item.github, "_blank")}
 
                     >
                       View on Github
