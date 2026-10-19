@@ -63,11 +63,12 @@ const Navbar = () => {
                 className="py-4 px-5 cursor-pointer"
                 onClick={() => {
                   setShowMenu(false);
-                  navigate("/youtube");
+                  window.open("https://www.youtube.com/@user-rr1vx4vc8s", "_blank");
                 }}
               >
                 Youtube
               </li>
+              {/* TODO(blog): hidden until blog is back
               <li
                 className="py-4 px-5 cursor-pointer"
                 onClick={() => {
@@ -76,7 +77,7 @@ const Navbar = () => {
                 }}
               >
                 Blog
-              </li>
+              </li> */}
               {token ? (
                 <li
                   className="py-4 px-5 text-white cursor-pointer"
@@ -160,6 +161,7 @@ const Navbar = () => {
                   Projects
                 </NavLink>
               </li>
+              {/* TODO(blog): hidden until blog is back
               <li>
                 <NavLink
                   to="/blog"
@@ -171,7 +173,7 @@ const Navbar = () => {
                 >
                   Blog
                 </NavLink>
-              </li>
+              </li> */}
               {token ? (
                 <li>
                   <NavLink

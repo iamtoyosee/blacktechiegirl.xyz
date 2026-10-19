@@ -16,8 +16,10 @@ import ExperienceGallery from "./Components/ExpCarousel/experience";
 import running from "./assets/running.gif";
 import Footer from "./Components/Footer/Footer";
 import Cert from "./Components/CertPage/cert";
-import Content from "./Components/Content/content";
-import Bloghome from "./Components/BlogHome/bloghome";
+// TODO(blog): Content loads posts from the API; projects are hardcoded below for now
+// import Content from "./Components/Content/content";
+// TODO(blog): re-enable with the blog section below
+// import Bloghome from "./Components/BlogHome/bloghome";
 
 function App() {
   const productRef = useRef(null);
@@ -180,7 +182,8 @@ function App() {
           </div> */}
 
              {/* Blog section   */}
-             <div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
+             {/* TODO(blog): hidden until blog data is restored
+<div className="max-w-[90%]  2xl:max-w-[70%] mx-auto mb-20">
             <div className="my-16">
               <h1 className=" font-bold text-2xl lg:text-4xl text-center font-smalltech py-4  md:mt-20 border-y">
                 LEARN SOMETHING NEW
@@ -195,6 +198,7 @@ function App() {
               </div>
             </div>
           </div>
+          */}
 
           <Cert />
 
@@ -207,8 +211,7 @@ function App() {
               </h1>
             </div>
 
-            <Content filterString={'project'}/>
-{/* 
+            {/* TODO(blog): was <Content filterString={'project'}/> (loaded from the API) */}
             <div className="grid lg:grid-cols-3 gap-10 mb-[120px] text-center">
               <div>
                 <img src={Proj1} className="h-[250px] w-full" />
@@ -267,7 +270,7 @@ function App() {
                   </a>{" "}
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
 
           {/* Video section   */}
