@@ -1,0 +1,13 @@
+// Cloudflare Workers config for neuroverselab.com
+// Serves the React build as static files (no server code).
+{
+  "name": "neuroverselab",
+  "compatibility_date": "2026-10-19",
+  "assets": {
+    // Folder created by `npm run build`
+    "directory": "./build",
+    // React Router handles pages like /about and /projects in the browser,
+    // so any path that isn't a real file gets index.html instead of a 404.
+    "not_found_handling": "single-page-application"
+  }
+}
