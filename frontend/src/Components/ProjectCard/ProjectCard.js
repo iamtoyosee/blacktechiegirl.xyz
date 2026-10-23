@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => (
         src={project.cover}
         alt={project.title}
         loading="lazy"
-        className="w-full h-[220px] object-cover"
+        className="w-full h-[220px] object-cover object-top"
       />
     ) : (
       // No screenshot yet: a soft purple panel with the project name
