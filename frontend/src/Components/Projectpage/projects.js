@@ -58,11 +58,18 @@ const Project = () => {
           {posts.map((item, index) => {
             return (
               <div key={index} className="border-y lg:grid grid-cols-2 gap-12  py-10 md:py-20">
-                <img
-                  src={item.cover}
-                  alt="product "
-                  className="h-[330px] w-full lg:max-w-lg object-cover  cursor-pointer object-center "
-                />
+                {item.cover ? (
+                  <img
+                    src={item.cover}
+                    alt={item.title}
+                    className="h-[330px] w-full lg:max-w-lg object-cover  cursor-pointer object-center "
+                  />
+                ) : (
+                  // No screenshot yet: purple panel with the project name
+                  <div className="h-[330px] w-full lg:max-w-lg bg-accent-soft flex items-center justify-center">
+                    <span className="font-display font-bold text-3xl text-accent">{item.title}</span>
+                  </div>
+                )}
                 <div className=" top-[50%] w-full lg:min-h-[330px]">
                   <div
                     className="lg:h-[70%]"
