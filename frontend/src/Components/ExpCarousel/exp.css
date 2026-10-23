@@ -1,0 +1,16 @@
+/* Swiper styling for the "Moments that shaped me" carousel */
+.experience-swiper {
+  padding-bottom: 48px !important; /* room for the dots */
+}
+.experience-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #a8a29e;
+  opacity: 1;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+.experience-swiper .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #0a0a0a;
+}

@@ -130,7 +130,7 @@ const Navbar = () => {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? "block p-2 ml-3 mr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      ? "block p-2 ml-3 mr-4 font-smalltech text-white border-b-2 border-b-accent-light"
                       : "block p-2 ml-3 mr-4 font-smalltech text-white"
                   }
                 >
@@ -142,7 +142,7 @@ const Navbar = () => {
                   to="/about"
                   className={({ isActive }) =>
                     isActive
-                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-accent-light"
                       : "block py-2 pl-3 pr-4 font-smalltech text-white"
                   }
                 >
@@ -154,7 +154,7 @@ const Navbar = () => {
                   to="/projects"
                   className={({ isActive }) =>
                     isActive
-                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-accent-light"
                       : "block py-2 pl-3 pr-4 font-smalltech text-white"
                   }
                 >
@@ -167,7 +167,7 @@ const Navbar = () => {
                   to="/blog"
                   className={({ isActive }) =>
                     isActive
-                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-fuchsia-800"
+                      ? "block py-2 pl-3 pr-4 font-smalltech text-white border-b-2 border-b-accent-light"
                       : "block py-2 pl-3 pr-4 font-smalltech text-white"
                   }
                 >

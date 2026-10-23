@@ -23,7 +23,9 @@ import Exp16 from "../../assets/Most Outstanding.jpeg";
 
 
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
-import { ButtonBox } from "../Button/button";
+import { useNavigate } from "react-router-dom";
+import SectionHeader from "../SectionHeader/SectionHeader";
+import Reveal from "../Reveal/Reveal";
 import './exp.css'; // Assuming you save the custom styles in this file
 
 const images = [
@@ -48,68 +50,91 @@ const images = [
 const ExperienceGallery = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const navigate = useNavigate();
 
   return (
-    <div className="max-w-[90%] 2xl:max-w-[70%] mx-auto relative">
-      <div className="my-8 lg:my-32">
-        <h1 className="border-y font-bold text-xl lg:text-4xl text-center font-smalltech py-4 mb-20 mt-20">
-          JOURNEY INTO DISCOVERY
-        </h1>
-      </div>
+    <section className="bg-cream">
+      <div className="max-w-[1240px] mx-auto px-6 py-24">
+        <Reveal className="flex flex-wrap items-end justify-between gap-6 mb-10">
+          <SectionHeader eyebrow="EXPERIENCE" title="Moments that shaped me" />
+          {/* Custom navigation buttons */}
+          <div className="flex gap-2.5">
+            <button
+              ref={prevRef}
+              type="button"
+              aria-label="Previous photo"
+              className="w-12 h-12 rounded-full border border-zinc-300 bg-white text-zinc-900 flex items-center justify-center transition hover:border-zinc-900"
+            >
+              <AiOutlineArrowLeft size={18} />
+            </button>
+            <button
+              ref={nextRef}
+              type="button"
+              aria-label="Next photo"
+              className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center transition hover:bg-accent"
+            >
+              <AiOutlineArrowRight size={18} />
+            </button>
+          </div>
+        </Reveal>
 
-      <Swiper
-        className="lg:w-[90%]"
-        spaceBetween={30}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        pagination={{ clickable: true }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-        loop
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        modules={[Navigation, Pagination, Autoplay]}
-        onBeforeInit={(swiper) => {
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-        }}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <div className="flex flex-col items-center">
-              <img
-                src={image.src}
-                className="h-[250px] w-full object-cover object-center"
-                alt={image.alt}
-              />
-              <p className="font-popreg font-bold my-4 lg:mt-8 mb-20 text-[20px] text-center">
-                {image.caption}
-              </p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+        <Reveal delay={100}>
+          <Swiper
+            className="experience-swiper"
+            spaceBetween={24}
+            slidesPerView={1.15}
+            breakpoints={{
+              640: { slidesPerView: 1.6 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            pagination={{ clickable: true }}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            loop
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={700}
+            modules={[Navigation, Pagination, Autoplay]}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }}
+          >
+            {images.map((image, index) => (
+              <SwiperSlide key={index}>
+                <figure className="m-0 flex flex-col gap-3.5">
+                  <img
+                    src={image.src}
+                    className="w-full aspect-[4/5] object-cover object-center rounded-2xl"
+                    alt={image.caption}
+                    loading="lazy"
+                  />
+                  <figcaption className="font-body text-base font-medium text-zinc-800">
+                    {image.caption}
+                  </figcaption>
+                </figure>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Reveal>
 
-      {/* Custom navigation buttons */}
-      <div className="absolute top-1/2 transform -translate-y-1/2 left-4 z-10 cursor-pointer" ref={prevRef}>
-        <AiOutlineArrowLeft size={30} className="text-gray-600 hidden md:block" />
+        <div className="flex justify-center mt-10">
+          <button
+            type="button"
+            onClick={() => navigate("/pictures")}
+            className="min-h-[48px] px-6 rounded-full border border-zinc-300 font-body font-semibold text-base transition hover:border-zinc-900"
+          >
+            View More Pictures
+          </button>
+        </div>
       </div>
-      <div className="absolute top-1/2 transform -translate-y-1/2 right-4 z-10 cursor-pointer " ref={nextRef}>
-        <AiOutlineArrowRight size={30} className="text-gray-600 hidden md:block" />
-      </div>
-
-      <div className="flex justify-center my-10">
-        <ButtonBox text="View More Pictures" />
-      </div>
-    </div>
+    </section>
   );
 };
 

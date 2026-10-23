@@ -1,7 +1,7 @@
-// Projects shown on the /projects page.
+// Projects shown on the home page and the /projects page.
 // These used to come from the API (posts tagged "project").
 // To add a project: import its image and add an object below.
-//   cover   – image shown on the card
+//   cover   – image shown on the card (null shows a purple title panel instead)
 //   title   – project name
 //   summary – short description
 //   url     – where "View Project" goes
@@ -34,6 +34,32 @@ const projects = [
     cover: insideOut,
     url: "https://github.com/iamtoyosee/Inside_Out",
     github: "https://github.com/iamtoyosee/Inside_Out",
+  },
+  // TODO(Aminat): add a screenshot (cover), a real summary and the repo link
+  {
+    title: "Agentic Pentest",
+    summary: "Penetration testing driven by AI agents.",
+    cover: null,
+    url: "https://pentest.neuroverselab.com",
+    github: "https://github.com/iamtoyosee",
+  },
+  // TODO(Aminat): add a screenshot (cover), a real summary and the repo link.
+  // Its url points to GitHub for now: vulnscanner.neuroverselab.com currently
+  // points to an IP address that is no longer ours.
+  {
+    title: "Vuln Scanner",
+    summary: "A tool for scanning applications for vulnerabilities.",
+    cover: null,
+    url: "https://github.com/iamtoyosee",
+    github: "https://github.com/iamtoyosee",
+  },
+  // TODO(Aminat): add a screenshot (cover), a real summary and the repo link
+  {
+    title: "Rejuvenate",
+    summary: "A web app built with React.",
+    cover: null,
+    url: "https://rejuvenate.neuroverselab.com",
+    github: "https://github.com/iamtoyosee",
   },
 ];
 
